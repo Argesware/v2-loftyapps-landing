@@ -62,3 +62,13 @@
     padding-left: 0.5rem;
   }
 }
+
+.terms-container {
+  width: 70%;
+}
+
+@media (max-width: 640px) {
+  .terms-container {
+    width: 90%;
+  }
+}
