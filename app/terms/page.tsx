@@ -182,11 +182,16 @@ export default function TermsConditions() {
             <h2 className="textTitle2 mb-4 font-serif">{data.titleDeploySubscription}</h2>
             <div className="text-justify">
               <SafeHTML html={data.text1DeploySubscription} />
-              <ul className="space-y-2 mt-4 list-disc pl-6">
-                {data.list1Deploy && <li><SafeHTML html={data.list1Deploy} /></li>}
-                {data.list2Deploy && <li><SafeHTML html={data.list2Deploy} /></li>}
-                {data.list3Deploy && <li><SafeHTML html={data.list3Deploy} /></li>}
-              </ul>
+              <div
+                className="terms-list space-y-2 mt-4"
+                dangerouslySetInnerHTML={{
+                  __html: `
+                    ${data.list1Deploy || ''}
+                    ${data.list2Deploy || ''}
+                    ${data.list3Deploy || ''}
+                  `
+                }}
+              />
             </div>
           </section>
 

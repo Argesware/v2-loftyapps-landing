@@ -64,7 +64,7 @@
 }
 
 .terms-container {
-  width: 70%;
+  width: 75%;
 }
 
 @media (max-width: 640px) {
@@ -79,4 +79,19 @@
 }
 .terms-container a:visited {
   color: #1e40af; /* azul tailwind-700 */
+}
+
+.terms-list ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.terms-list ul ul {
+  list-style-type: circle;
+  padding-left: 1.5rem;
+  margin-bottom: 0;
+}
+.terms-list ul ul ul {
+  list-style-type: square;
+  padding-left: 1.5rem;
 }
