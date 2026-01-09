@@ -14,7 +14,8 @@
 }
 
 .textTitle {
-  font-family: 'TimesNewRomanPS-BoldMT', 'Times New Roman', Times, serif;
+  /* font-family: 'TimesNewRomanPS-BoldMT', 'Times New Roman', Times, serif; */
+  font-family: 'Roboto', sans-serif; /* 'TimesNewRomanPS-BoldMT', 'Times New Roman', Times, serif; */
   font-style: normal;
   font-weight: 700;
   font-size: 3em;
@@ -31,7 +32,8 @@
 }
 
 .textTitle2 {
-  font-family: 'TimesNewRomanPS-BoldMT', 'Times New Roman', Times, serif;
+  /* font-family: 'TimesNewRomanPS-BoldMT', 'Times New Roman', Times, serif; */
+  font-family: 'Roboto', sans-serif; /* 'TimesNewRomanPS-BoldMT', 'Times New Roman', Times, serif; */
   font-style: normal;
   font-weight: 900;
   font-size: 1.1em;
@@ -46,7 +48,8 @@
 }
 
 .textP {
-  font-family: 'TimesNewRomanPSMT', 'Times New Roman', Times, serif;
+  /* font-family: 'TimesNewRomanPSMT', 'Times New Roman', Times, serif; */
+  font-family: 'Roboto', sans-serif; /* 'TimesNewRomanPSMT', 'Times New Roman', Times, serif; */
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
