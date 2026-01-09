@@ -340,7 +340,7 @@ export default function LandingPage() {
               <h3 className="text-sm font-bold text-[#1a202c] mb-6 uppercase tracking-wider">Compañía</h3>
               <ul className="space-y-4 text-sm text-gray-600">
                 <li>
-                  <Link href="#" className="hover:text-[#0891b2] transition-colors">
+                  <Link href="/terms" className="hover:text-[#0891b2] transition-colors">
                     Términos y Condiciones
                   </Link>
                 </li>
