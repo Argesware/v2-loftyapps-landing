@@ -2,7 +2,12 @@ import data from '../textdata/tc.json'
 
 const SafeHTML = ({ html }: { html?: string }) => {
   if (!html) return null;
-  return <div dangerouslySetInnerHTML={{ __html: html }} />;
+  return (
+    <div
+      className="safe-html"
+      dangerouslySetInnerHTML={{ __html: html }}
+    />
+  );
 };
 
 export default function TermsConditions() {

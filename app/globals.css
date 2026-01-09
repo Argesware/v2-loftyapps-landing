@@ -224,3 +224,8 @@
   opacity: 1;
   transform: translate(0, 0) !important;
 }
+
+.safe-html a {
+  color: blue;
+  text-decoration: underline;
+}
