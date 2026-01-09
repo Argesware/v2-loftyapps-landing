@@ -72,3 +72,11 @@
     width: 90%;
   }
 }
+
+.terms-container a {
+  color: #2563eb; /* azul tailwind-500 */
+  text-decoration: underline;
+}
+.terms-container a:visited {
+  color: #1e40af; /* azul tailwind-700 */
+}

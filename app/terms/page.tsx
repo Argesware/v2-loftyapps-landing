@@ -38,14 +38,19 @@ export default function TermsConditions() {
           {/* Terminologia */}
           <section className="mb-8">
             <h2 className="textTitle2 mb-4 font-serif">{data.titleTerminologia}</h2>
-            <ul className="space-y-2 text-justify">
-              <SafeHTML html={data.list1Terminologia} />
-              <SafeHTML html={data.list2Terminologia} />
-              <SafeHTML html={data.list3Terminologia} />
-              <SafeHTML html={data.list4Terminologia} />
-              <SafeHTML html={data.list5Terminologia} />
-              <SafeHTML html={data.list6Terminologia} />
-            </ul>
+            <ul
+              className="space-y-2 text-justify list-disc pl-6"
+              dangerouslySetInnerHTML={{
+                __html: `
+                  ${data.list1Terminologia || ''}
+                  ${data.list2Terminologia || ''}
+                  ${data.list3Terminologia || ''}
+                  ${data.list4Terminologia || ''}
+                  ${data.list5Terminologia || ''}
+                  ${data.list6Terminologia || ''}
+                `
+              }}
+            />
           </section>
 
           {/* Content User */}
@@ -140,11 +145,16 @@ export default function TermsConditions() {
             <h2 className="textTitle2 mb-4 font-serif">{data.titleSubscription}</h2>
             <div className="text-justify">
               <SafeHTML html={data.text1Subscription} />
-              <ul className="space-y-2 mt-4">
-                <SafeHTML html={data.list1Subscription} />
-                <SafeHTML html={data.list2Subscription} />
-                <SafeHTML html={data.list3Subscription} />
-              </ul>
+              <ul
+                className="space-y-2 mt-4 list-disc pl-6"
+                dangerouslySetInnerHTML={{
+                  __html: `
+                    ${data.list1Subscription || ''}
+                    ${data.list2Subscription || ''}
+                    ${data.list3Subscription || ''}
+                  `
+                }}
+              />
             </div>
           </section>
 
@@ -153,12 +163,17 @@ export default function TermsConditions() {
             <h2 className="textTitle2 mb-4 font-serif">{data.titleExportCode}</h2>
             <div className="text-justify">
               <SafeHTML html={data.text1ExportCode} />
-              <ul className="space-y-2 mt-4">
-                <SafeHTML html={data.list1ExportCode} />
-                <SafeHTML html={data.list2ExportCode} />
-                <SafeHTML html={data.list3ExportCode} />
-                <SafeHTML html={data.list4ExportCode} />
-              </ul>
+              <ul
+                className="space-y-2 mt-4 list-disc pl-6"
+                dangerouslySetInnerHTML={{
+                  __html: `
+                    ${data.list1ExportCode || ''}
+                    ${data.list2ExportCode || ''}
+                    ${data.list3ExportCode || ''}
+                    ${data.list4ExportCode || ''}
+                  `
+                }}
+              />
             </div>
           </section>
 
