@@ -1,50 +1,11 @@
 import data from '../textdata/tc.json'
-
-const titleStyle: React.CSSProperties = {
-  fontFamily: 'TimesNewRomanPS-BoldMT, Times New Roman, Times, serif',
-  fontStyle: 'normal',
-  fontWeight: 700,
-  fontSize: '3em',
-  lineHeight: '75px',
-  letterSpacing: '0em',
-  paddingRight: '1rem',
-};
-const title2Style: React.CSSProperties = {
-  fontFamily: 'TimesNewRomanPS-BoldMT, Times New Roman, Times, serif',
-  fontStyle: 'normal',
-  fontWeight: 900,
-  fontSize: '1.1em',
-  lineHeight: '55px',
-  letterSpacing: '0em',
-};
-const pStyle: React.CSSProperties = {
-  fontFamily: 'TimesNewRomanPSMT, Times New Roman, Times, serif',
-  fontStyle: 'normal',
-  fontWeight: 500,
-  fontSize: '18px',
-  lineHeight: '21px',
-  letterSpacing: '0em',
-  padding: '1rem',
-};
-
-// Responsive adjustments (simple example)
-const isMobile = typeof window !== 'undefined' && window.innerWidth < 640;
-if (isMobile) {
-  titleStyle.fontSize = '1.5em';
-  titleStyle.paddingRight = '0.5rem';
-  title2Style.fontSize = '1em';
-  pStyle.fontSize = '0.9em';
-  pStyle.padding = '0rem';
-  pStyle.margin = '0rem';
-  pStyle.paddingLeft = '0.5rem';
-}
+import './terms.css' // <-- Add this import
 
 const SafeHTML = ({ html }: { html?: string }) => {
   if (!html) return null;
   return (
     <div
-      className="safe-html"
-      style={pStyle}
+      className="textP"
       dangerouslySetInnerHTML={{ __html: html }}
     />
   );
@@ -56,15 +17,14 @@ export default function TermsConditions() {
       <div className="max-w-4xl mx-auto">
         <article className="prose prose-lg max-w-none">
           <h1
-            className="text-4xl md:text-5xl font-bold mb-8 font-serif"
-            style={titleStyle}
+            className="textTitle mb-8 font-serif"
           >
             Terminos y Condiciones
           </h1>
 
           {/* Info Relevante */}
           <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4 font-serif" style={title2Style}>{data.titleInfoRelevante}</h2>
+            <h2 className="textTitle2 mb-4 font-serif">{data.titleInfoRelevante}</h2>
             <div className="space-y-4 text-justify">
               <SafeHTML html={data.textInfoRelevante} />
               <SafeHTML html={data.text2InfoRelevante} />
@@ -77,7 +37,7 @@ export default function TermsConditions() {
 
           {/* Terminologia */}
           <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4 font-serif" style={title2Style}>{data.titleTerminologia}</h2>
+            <h2 className="textTitle2 mb-4 font-serif">{data.titleTerminologia}</h2>
             <ul className="space-y-2 text-justify">
               <SafeHTML html={data.list1Terminologia} />
               <SafeHTML html={data.list2Terminologia} />
@@ -90,7 +50,7 @@ export default function TermsConditions() {
 
           {/* Content User */}
           <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4 font-serif" style={title2Style}>{data.title3Main}</h2>
+            <h2 className="textTitle2 mb-4 font-serif">{data.title3Main}</h2>
             <div className="text-justify">
               <SafeHTML html={data.textContentMain} />
             </div>
@@ -98,7 +58,7 @@ export default function TermsConditions() {
 
           {/* Servicios */}
           <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4 font-serif" style={title2Style}>{data.titleServices}</h2>
+            <h2 className="textTitle2 mb-4 font-serif">{data.titleServices}</h2>
             <div className="text-justify">
               <SafeHTML html={data.textServices} />
             </div>
@@ -106,7 +66,7 @@ export default function TermsConditions() {
 
           {/* Licencia */}
           <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4 font-serif" style={title2Style}>{data.titleLicense}</h2>
+            <h2 className="textTitle2 mb-4 font-serif">{data.titleLicense}</h2>
             <div className="space-y-4 text-justify">
               <SafeHTML html={data.text1License} />
               <SafeHTML html={data.text2License} />
@@ -117,7 +77,7 @@ export default function TermsConditions() {
 
           {/* Restricciones */}
           <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4 font-serif" style={title2Style}>{data.titleRestrictions}</h2>
+            <h2 className="textTitle2 mb-4 font-serif">{data.titleRestrictions}</h2>
             <div className="space-y-4 text-justify">
               <SafeHTML html={data.text1Restrictions} />
               <SafeHTML html={data.text2Restrictions} />
@@ -126,7 +86,7 @@ export default function TermsConditions() {
 
           {/* Prestaciones */}
           <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4 font-serif" style={title2Style}>{data.titlePrestac}</h2>
+            <h2 className="textTitle2 mb-4 font-serif">{data.titlePrestac}</h2>
             <div className="text-justify">
               <SafeHTML html={data.textPrestac} />
             </div>
@@ -135,13 +95,13 @@ export default function TermsConditions() {
           {/* Use Services */}
           {data.titleUseServices && (
             <section className="mb-8">
-              <h2 className="text-2xl font-bold mb-4 font-serif" style={title2Style}>{data.titleUseServices}</h2>
+              <h2 className="textTitle2 mb-4 font-serif">{data.titleUseServices}</h2>
             </section>
           )}
 
           {/* User Use */}
           <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4 font-serif" style={title2Style}>{data.titleUseUser}</h2>
+            <h2 className="textTitle2 mb-4 font-serif">{data.titleUseUser}</h2>
             <div className="space-y-4 text-justify">
               <SafeHTML html={data.text1UseUser} />
               <SafeHTML html={data.text2UseUser} />
@@ -150,7 +110,7 @@ export default function TermsConditions() {
 
           {/* User Req */}
           <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4 font-serif" style={title2Style}>{data.titleReq}</h2>
+            <h2 className="textTitle2 mb-4 font-serif">{data.titleReq}</h2>
             <div className="text-justify">
               <SafeHTML html={data.text1Req} />
             </div>
@@ -158,7 +118,7 @@ export default function TermsConditions() {
 
           {/* User Content */}
           <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4 font-serif" style={title2Style}>{data.titleUserContent}</h2>
+            <h2 className="textTitle2 mb-4 font-serif">{data.titleUserContent}</h2>
             <div className="space-y-4 text-justify">
               <SafeHTML html={data.text1UserContent} />
               <SafeHTML html={data.text2UserContent} />
@@ -169,7 +129,7 @@ export default function TermsConditions() {
 
           {/* Network Access */}
           <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4 font-serif" style={title2Style}>{data.titleNetAccess}</h2>
+            <h2 className="textTitle2 mb-4 font-serif">{data.titleNetAccess}</h2>
             <div className="text-justify">
               <SafeHTML html={data.text1NetAccess} />
             </div>
@@ -177,7 +137,7 @@ export default function TermsConditions() {
 
           {/* Subscription */}
           <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4 font-serif" style={title2Style}>{data.titleSubscription}</h2>
+            <h2 className="textTitle2 mb-4 font-serif">{data.titleSubscription}</h2>
             <div className="text-justify">
               <SafeHTML html={data.text1Subscription} />
               <ul className="space-y-2 mt-4">
@@ -190,7 +150,7 @@ export default function TermsConditions() {
 
           {/* Export Code */}
           <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4 font-serif" style={title2Style}>{data.titleExportCode}</h2>
+            <h2 className="textTitle2 mb-4 font-serif">{data.titleExportCode}</h2>
             <div className="text-justify">
               <SafeHTML html={data.text1ExportCode} />
               <ul className="space-y-2 mt-4">
@@ -204,7 +164,7 @@ export default function TermsConditions() {
 
           {/* Deployment */}
           <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4 font-serif" style={title2Style}>{data.titleDeploySubscription}</h2>
+            <h2 className="textTitle2 mb-4 font-serif">{data.titleDeploySubscription}</h2>
             <div className="text-justify">
               <SafeHTML html={data.text1DeploySubscription} />
               <ul className="space-y-2 mt-4 list-disc pl-6">
@@ -217,7 +177,7 @@ export default function TermsConditions() {
 
           {/* Pasarela */}
           <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4 font-serif" style={title2Style}>{data.titlePasarela}</h2>
+            <h2 className="textTitle2 mb-4 font-serif">{data.titlePasarela}</h2>
             <div className="text-justify">
               <SafeHTML html={data.text1Pasarela} />
             </div>
@@ -225,7 +185,7 @@ export default function TermsConditions() {
 
           {/* Pago */}
           <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4 font-serif" style={title2Style}>{data.titlePago}</h2>
+            <h2 className="textTitle2 mb-4 font-serif">{data.titlePago}</h2>
             <div className="space-y-4 text-justify">
               <SafeHTML html={data.text1Pago} />
               <SafeHTML html={data.text2Pago} />
@@ -235,7 +195,7 @@ export default function TermsConditions() {
 
           {/* Gestion */}
           <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4 font-serif" style={title2Style}>{data.titleGestion}</h2>
+            <h2 className="textTitle2 mb-4 font-serif">{data.titleGestion}</h2>
             <div className="text-justify">
               <SafeHTML html={data.text1Gestion} />
             </div>
@@ -243,17 +203,17 @@ export default function TermsConditions() {
 
           {/* RENUNCIAS */}
           <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4 font-serif" style={title2Style}>{data.mainRenuncias}</h2>
-            <h3 className="text-xl font-bold mb-3 font-serif" style={title2Style}>{data.titleRenuncias}</h3>
-            <div className="text-justify" style={pStyle}>
+            <h2 className="textTitle2 mb-4 font-serif">{data.mainRenuncias}</h2>
+            <h3 className="textTitle2 text-xl font-bold mb-3 font-serif">{data.titleRenuncias}</h3>
+            <div className="text-justify textP">
               <SafeHTML html={data.text1Renuncias} />
             </div>
           </section>
 
           {/* Limitaciones */}
           <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4 font-serif" style={title2Style}>{data.titleLimitations}</h2>
-            <div className="space-y-4 text-justify" style={pStyle}>
+            <h2 className="textTitle2 mb-4 font-serif">{data.titleLimitations}</h2>
+            <div className="space-y-4 text-justify textP">
               <SafeHTML html={data.text1Limitations} />
               <SafeHTML html={data.text2Limitations} />
             </div>
@@ -261,7 +221,7 @@ export default function TermsConditions() {
 
           {/* Indemnidad */}
           <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4 font-serif" style={title2Style}>{data.titleIndemnidad}</h2>
+            <h2 className="textTitle2 mb-4 font-serif">{data.titleIndemnidad}</h2>
             <div className="text-justify">
               <SafeHTML html={data.text1Indemnidad} />
             </div>
@@ -269,7 +229,7 @@ export default function TermsConditions() {
 
           {/* Legislacion */}
           <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4 font-serif" style={title2Style}>{data.titleLegislacion}</h2>
+            <h2 className="textTitle2 mb-4 font-serif">{data.titleLegislacion}</h2>
             <div className="space-y-4 text-justify">
               <SafeHTML html={data.text1Legislacion} />
               <SafeHTML html={data.text2Legislacion} />
@@ -278,7 +238,7 @@ export default function TermsConditions() {
 
           {/* Notificaciones */}
           <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4 font-serif" style={title2Style}>{data.titleNotifications}</h2>
+            <h2 className="textTitle2 mb-4 font-serif">{data.titleNotifications}</h2>
             <div className="text-justify">
               <SafeHTML html={data.text1Notifications} />
             </div>
@@ -286,7 +246,7 @@ export default function TermsConditions() {
 
           {/* Disposiciones */}
           <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4 font-serif" style={title2Style}>{data.titleDisposiciones}</h2>
+            <h2 className="textTitle2 mb-4 font-serif">{data.titleDisposiciones}</h2>
             <div className="space-y-4 text-justify">
               <SafeHTML html={data.text1Disposiciones} />
               <SafeHTML html={data.text2Disposiciones} />

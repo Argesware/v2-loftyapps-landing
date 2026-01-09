@@ -1,0 +1,64 @@
+.textPTitle {
+  width: 100%;
+  padding-top: 2rem;
+}
+@media (max-width: 640px) {
+  .textPTitle {
+    padding-top: 0rem;
+  }
+}
+
+.sectioncontent {
+  max-width: 80vh;
+  margin: 0 auto;
+}
+
+.textTitle {
+  font-family: 'TimesNewRomanPS-BoldMT', 'Times New Roman', Times, serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3em;
+  line-height: 75px;
+  letter-spacing: 0em;
+  padding-right: 1rem;
+}
+@media (max-width: 640px) {
+  .textTitle {
+    font-size: 1.5em;
+    padding-left: 0.5rem;
+    padding-right: 0;
+  }
+}
+
+.textTitle2 {
+  font-family: 'TimesNewRomanPS-BoldMT', 'Times New Roman', Times, serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 1.1em;
+  line-height: 55px;
+  letter-spacing: 0em;
+}
+@media (max-width: 640px) {
+  .textTitle2 {
+    font-size: 1em;
+    padding: 0rem;
+  }
+}
+
+.textP {
+  font-family: 'TimesNewRomanPSMT', 'Times New Roman', Times, serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0em;
+  padding: 1rem;
+}
+@media (max-width: 640px) {
+  .textP {
+    font-size: 0.9em;
+    padding: 0rem;
+    margin: 0rem;
+    padding-left: 0.5rem;
+  }
+}
