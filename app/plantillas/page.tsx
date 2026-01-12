@@ -145,8 +145,8 @@ export default function PlantillasPage() {
                       onClick={() => handleTemplateClick(template)}
                       className="neu-flat rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 group cursor-pointer"
                     >
-                      <div className="relative overflow-hidden bg-[#e9e8e5] w-full">
-                        <div className="flex justify-center items-center overflow-hidden w-full h-64 rounded-xl mx-auto">
+                      <div className="relative overflow-hidden bg-[#e9e8e5] w-full rounded-t-xl">
+                        <div className="flex justify-center items-center overflow-hidden w-full h-64 rounded-t-xl mx-auto">
                           {template.url && (
                             <Thumbnail
                               url={template.url.startsWith('http') 
