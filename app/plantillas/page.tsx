@@ -7,6 +7,17 @@ import { useState, useEffect } from "react"
 import CurrencySelector from "@/components/currency-selector"
 import { getProjectTemplates } from 'api-lofty'
 import { useRouter } from 'next/navigation'
+import dynamic from 'next/dynamic'
+
+// Dynamically import Thumbnail to avoid SSR issues
+const Thumbnail = dynamic(() => import('react-webpage-thumbnail'), {
+  ssr: false,
+  loading: () => (
+    <div className="w-full h-full flex items-center justify-center bg-gray-100 rounded-xl">
+      <p className="text-gray-400 text-sm">Cargando vista previa...</p>
+    </div>
+  ),
+})
 
 interface Template {
   _id: string
@@ -31,12 +42,12 @@ export default function PlantillasPage() {
           _id: project._id || project.id || '',
           name: project.name || '',
           description: project.description || '',
-          url: project.url || project.domain || '',
+          url: project.url || project.domain || project.slug || '',
           price: project.price ?? 0,
           category: project.category
         }))
         setTemplateData(mappedData)
-        console.log('Fetched templates AAAAAAAAAAAAa:', mappedData);
+        console.log('Fetched templates:', mappedData);
       } catch (error) {
         console.error('Error fetching templates:', error)
       } finally {
@@ -136,16 +147,16 @@ export default function PlantillasPage() {
                     >
                       <div className="relative overflow-hidden bg-[#e9e8e5] p-5">
                         <div className="flex justify-center items-center overflow-hidden w-full h-64 rounded-xl mx-auto">
-                          <iframe
-                            src={`https://${template.url}.loftyapps.website`}
-                            className="w-[270px] h-[1000px] origin-top-left scale-[0.27] pointer-events-none"
-                            style={{
-                              border: 'none',
-                              transform: 'scale(0.27)',
-                              transformOrigin: 'top left',
-                            }}
-                            title={template.name}
-                          />
+                          {template.url && (
+                            <Thumbnail
+                              url={template.url.startsWith('http') 
+                                ? template.url 
+                                : `https://${template.url}.loftyapps.website`}
+                              iframeHeight={4000}
+                              iframeWidth={1080}
+                              className="w-full h-full"
+                            />
+                          )}
                         </div>
                         {template.price !== undefined && (
                           <div className="absolute top-3 right-3">
