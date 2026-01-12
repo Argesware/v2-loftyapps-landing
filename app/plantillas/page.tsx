@@ -152,8 +152,8 @@ export default function PlantillasPage() {
                               url={template.url.startsWith('http') 
                                 ? template.url 
                                 : `https://${template.url}.loftyapps.website`}
-                              iframeHeight={4000}
-                              iframeWidth={1080}
+                                iframeHeight={1920}
+                        iframeWidth={1920}
                               className="w-full h-full"
                             />
                           )}
@@ -162,7 +162,7 @@ export default function PlantillasPage() {
                           <div className="absolute top-3 right-3">
                             <span className="neu-flat text-xs font-bold px-3 py-1.5 rounded-full text-[#0891b2]">
                               {template.price > 0 
-                                ? `L ${template.price.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`
+                                ? `HNL ${template.price.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`
                                 : 'Gratis'
                               }
                             </span>
