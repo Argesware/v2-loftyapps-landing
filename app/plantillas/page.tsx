@@ -8,6 +8,7 @@ import CurrencySelector from "@/components/currency-selector"
 import { getProjectTemplates } from 'api-lofty'
 import { useRouter } from 'next/navigation'
 import dynamic from 'next/dynamic'
+import TemplatesCard from "@/components/templates-card" // <-- import new component
 
 // Dynamically import Thumbnail to avoid SSR issues
 const Thumbnail = dynamic(() => import('react-webpage-thumbnail'), {
@@ -139,50 +140,10 @@ export default function PlantillasPage() {
             {/* Templates Grid */}
             {!loading && (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredTemplates.map((template, index) => (
-                  <ScrollReveal key={template._id} delay={index * 50}>
-                    <div
-                      onClick={() => handleTemplateClick(template)}
-                      className="neu-flat rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 group cursor-pointer"
-                    >
-                      <div className="relative overflow-hidden bg-[#e9e8e5] w-full rounded-t-xl">
-                        <div className="flex justify-center items-center overflow-hidden w-full h-64 rounded-t-xl mx-auto">
-                          {template.url && (
-                            <Thumbnail
-                              url={template.url.startsWith('http') 
-                                ? template.url 
-                                : `https://${template.url}.loftyapps.website`}
-                                iframeHeight={1920}
-                        iframeWidth={1920}
-                              className="w-full h-full"
-                            />
-                          )}
-                        </div>
-                        {template.price !== undefined && (
-                          <div className="absolute top-3 right-3">
-                            <span className="neu-flat text-xs font-bold px-3 py-1.5 rounded-full text-[#0891b2]">
-                              {template.price > 0 
-                                ? `HNL ${template.price.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`
-                                : 'Gratis'
-                              }
-                            </span>
-                          </div>
-                        )}
-                      </div>
-                      <div className="p-6">
-                        <h3 className="text-xl font-bold text-[#1a202c] mb-3 group-hover:text-[#0891b2] transition-colors line-clamp-2 min-h-[56px]">
-                          {template.name}
-                        </h3>
-                        <p className="text-sm text-gray-600 leading-relaxed mb-4 line-clamp-3">
-                          {template.description}
-                        </p>
-                        <div className="neu-btn w-full py-2.5 text-sm font-bold group-hover:shadow-lg transition-all text-center">
-                          Ver Plantilla
-                        </div>
-                      </div>
-                    </div>
-                  </ScrollReveal>
-                ))}
+                <TemplatesCard
+                  templates={filteredTemplates}
+                  onTemplateClick={handleTemplateClick}
+                />
               </div>
             )}
 
