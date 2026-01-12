@@ -3,85 +3,58 @@
 import Link from "next/link"
 import { Search } from "lucide-react"
 import { ScrollReveal } from "@/components/scroll-reveal"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import CurrencySelector from "@/components/currency-selector"
+import { getProjectTemplates } from 'api-lofty'
+import { useRouter } from 'next/navigation'
 
-// Datos de plantillas de ejemplo
-const templates = [
-  {
-    id: 1,
-    title: "E-commerce Moderno",
-    description: "Tienda online completa con carrito de compras, pagos integrados y panel de administración.",
-    image: "/modern-ecommerce-interface.png",
-    category: "E-commerce",
-  },
-  {
-    id: 2,
-    title: "Dashboard Empresarial",
-    description: "Panel de control analítico con gráficos, tablas y widgets personalizables para negocios.",
-    image: "/business-analytics-dashboard.png",
-    category: "Business",
-  },
-  {
-    id: 3,
-    title: "Landing Page SaaS",
-    description: "Página de aterrizaje moderna para productos SaaS con secciones de precios y características.",
-    image: "/saas-landing-page.png",
-    category: "Marketing",
-  },
-  {
-    id: 4,
-    title: "Blog Personal",
-    description: "Sitio de blog minimalista con gestión de artículos, categorías y comentarios.",
-    image: "/minimalist-blog-layout.png",
-    category: "Content",
-  },
-  {
-    id: 5,
-    title: "Portfolio Creativo",
-    description: "Portafolio profesional para diseñadores y creativos con galerías y proyectos destacados.",
-    image: "/creative-portfolio-showcase.png",
-    category: "Portfolio",
-  },
-  {
-    id: 6,
-    title: "App de Reservas",
-    description: "Sistema de reservas y citas con calendario, notificaciones y gestión de clientes.",
-    image: "/booking-appointment-app.jpg",
-    category: "Business",
-  },
-  {
-    id: 7,
-    title: "Red Social",
-    description: "Plataforma social con perfiles de usuario, publicaciones, likes y sistema de mensajería.",
-    image: "/social-media-platform.png",
-    category: "Social",
-  },
-  {
-    id: 8,
-    title: "Marketplace",
-    description: "Mercado multi-vendedor con sistema de vendedores, productos y comisiones.",
-    image: "/marketplace-vendor-platform.jpg",
-    category: "E-commerce",
-  },
-  {
-    id: 9,
-    title: "LMS Educativo",
-    description: "Sistema de gestión de aprendizaje con cursos, lecciones, evaluaciones y certificados.",
-    image: "/elearning-platform-courses.jpg",
-    category: "Education",
-  },
-]
+interface Template {
+  _id: string
+  name: string
+  description: string
+  url: string
+  price: number
+  category?: string
+}
 
 export default function PlantillasPage() {
+  const [templateData, setTemplateData] = useState<Template[]>([])
   const [searchQuery, setSearchQuery] = useState("")
+  const [loading, setLoading] = useState(true)
+  const router = useRouter()
 
-  const filteredTemplates = templates.filter(
+  useEffect(() => {
+    const fetchTemplates = async () => {
+      try {
+        const data = await getProjectTemplates()
+        const mappedData: Template[] = data.data.map((project: any) => ({
+          _id: project._id || project.id || '',
+          name: project.name || '',
+          description: project.description || '',
+          url: project.url || project.domain || '',
+          price: project.price ?? 0,
+          category: project.category
+        }))
+        setTemplateData(mappedData)
+        console.log('Fetched templates AAAAAAAAAAAAa:', mappedData);
+      } catch (error) {
+        console.error('Error fetching templates:', error)
+      } finally {
+        setLoading(false)
+      }
+    }
+    fetchTemplates()
+  }, [])
+
+  const filteredTemplates = templateData.filter(
     (template) =>
-      template.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      template.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      template.category.toLowerCase().includes(searchQuery.toLowerCase()),
+      template.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      template.description.toLowerCase().includes(searchQuery.toLowerCase())
   )
+
+  const handleTemplateClick = (template: Template) => {
+    router.push(`/plantillas/${template._id}`)
+  }
 
   return (
     <div className="flex min-h-screen flex-col bg-[#e0e5ec] text-[#2c3e50]">
@@ -145,41 +118,65 @@ export default function PlantillasPage() {
               </div>
             </ScrollReveal>
 
+            {/* Loading State */}
+            {loading && (
+              <div className="text-center py-20">
+                <p className="text-gray-600">Cargando plantillas...</p>
+              </div>
+            )}
+
             {/* Templates Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredTemplates.map((template, index) => (
-                <ScrollReveal key={template.id} delay={index * 50}>
-                  <Link href={`/plantillas/${template.id}`}>
-                    <div className="neu-flat rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 group cursor-pointer">
-                      <div className="relative overflow-hidden">
-                        <img
-                          src={template.image || "/placeholder.svg"}
-                          alt={template.title}
-                          className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
-                        />
-                        <div className="absolute top-3 right-3">
-                          <span className="neu-flat text-xs font-bold px-3 py-1.5 rounded-full text-[#0891b2]">
-                            {template.category}
-                          </span>
+            {!loading && (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {filteredTemplates.map((template, index) => (
+                  <ScrollReveal key={template._id} delay={index * 50}>
+                    <div
+                      onClick={() => handleTemplateClick(template)}
+                      className="neu-flat rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 group cursor-pointer"
+                    >
+                      <div className="relative overflow-hidden bg-[#e9e8e5] p-5">
+                        <div className="flex justify-center items-center overflow-hidden w-full h-64 rounded-xl mx-auto">
+                          <iframe
+                            src={`https://${template.url}.loftyapps.website`}
+                            className="w-[270px] h-[1000px] origin-top-left scale-[0.27] pointer-events-none"
+                            style={{
+                              border: 'none',
+                              transform: 'scale(0.27)',
+                              transformOrigin: 'top left',
+                            }}
+                            title={template.name}
+                          />
                         </div>
+                        {template.price !== undefined && (
+                          <div className="absolute top-3 right-3">
+                            <span className="neu-flat text-xs font-bold px-3 py-1.5 rounded-full text-[#0891b2]">
+                              {template.price > 0 
+                                ? `L ${template.price.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`
+                                : 'Gratis'
+                              }
+                            </span>
+                          </div>
+                        )}
                       </div>
                       <div className="p-6">
-                        <h3 className="text-xl font-bold text-[#1a202c] mb-3 group-hover:text-[#0891b2] transition-colors">
-                          {template.title}
+                        <h3 className="text-xl font-bold text-[#1a202c] mb-3 group-hover:text-[#0891b2] transition-colors line-clamp-2 min-h-[56px]">
+                          {template.name}
                         </h3>
-                        <p className="text-sm text-gray-600 leading-relaxed mb-4">{template.description}</p>
+                        <p className="text-sm text-gray-600 leading-relaxed mb-4 line-clamp-3">
+                          {template.description}
+                        </p>
                         <div className="neu-btn w-full py-2.5 text-sm font-bold group-hover:shadow-lg transition-all text-center">
                           Ver Plantilla
                         </div>
                       </div>
                     </div>
-                  </Link>
-                </ScrollReveal>
-              ))}
-            </div>
+                  </ScrollReveal>
+                ))}
+              </div>
+            )}
 
             {/* No Results */}
-            {filteredTemplates.length === 0 && (
+            {!loading && filteredTemplates.length === 0 && (
               <div className="text-center py-20">
                 <div className="neu-flat rounded-full w-20 h-20 mx-auto mb-6 flex items-center justify-center">
                   <Search className="h-8 w-8 text-gray-400" />
