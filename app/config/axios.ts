@@ -1,13 +1,12 @@
-import axios from 'axios';
+import axios, { AxiosInstance } from "axios";
 
-// const url = 'http://localhost:4000';
+// const url: string = "http://localhost:4000";
+const url: string = "https://userproject.loftyapps.online";
 
-const url = 'https://userproject.loftyapps.online';
-
-const instancePro = axios.create({
+const instancePro: AxiosInstance = axios.create({
   baseURL: url,
   headers: {
-    'Content-Type': 'application/json',
+    "Content-Type": "application/json",
   },
 });
 
