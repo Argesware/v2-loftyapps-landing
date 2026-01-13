@@ -389,7 +389,7 @@ export default function DocumentacionPage() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-[#0891b2] transition-colors">
+                  <Link href="/politica-privacidad" className="hover:text-[#0891b2] transition-colors">
                     Políticas de Privacidad
                   </Link>
                 </li>
