@@ -37,10 +37,12 @@ export default function HeaderNavbar() {
         </nav>
         <div className="flex items-center gap-4">
           <CurrencySelector />
-          <Link href="/login" className="hidden text-sm font-medium text-gray-600 hover:text-[#1a202c] md:block">
+          <Link href="https://platform.loftyapps.com/" className="hidden text-sm font-medium text-gray-600 hover:text-[#1a202c] md:block">
             Iniciar Sesión
           </Link>
-          <button className="neu-btn px-6 py-2.5 text-sm font-bold">Comenzar</button>
+          <Link href="https://platform.loftyapps.com/">
+            <button className="neu-btn px-6 py-2.5 text-sm font-bold">Comenzar</button>
+          </Link>
         </div>
       </div>
     </header>

@@ -1,54 +1,37 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import CurrencySelector from "@/components/currency-selector"
+import Link from "next/link";
+import CurrencySelector from "@/components/currency-selector";
 
-import { Play, Zap, Code2, Building2, Users, Instagram, Facebook, Linkedin, Youtube } from "lucide-react"
-import { useState } from "react"
-import ScrollReveal from "@/components/scroll-reveal"
+import {
+  Play,
+  Zap,
+  Code2,
+  Building2,
+  Users,
+  Instagram,
+  Facebook,
+  Linkedin,
+  Youtube,
+} from "lucide-react";
+import { useState } from "react";
+import ScrollReveal from "@/components/scroll-reveal";
 
 export default function LandingPage() {
-  const [prompt, setPrompt] = useState("")
-  const [isGenerating, setIsGenerating] = useState(false)
+  const [prompt, setPrompt] = useState("");
+  const [isGenerating, setIsGenerating] = useState(false);
 
   const handleGenerate = () => {
-    if (!prompt.trim()) return
-    setIsGenerating(true)
+    if (!prompt.trim()) return;
+    setIsGenerating(true);
     setTimeout(() => {
-      setIsGenerating(false)
-      console.log("[v0] Generando producto digital con prompt:", prompt)
-    }, 2000)
-  }
+      setIsGenerating(false);
+      console.log("[v0] Generando producto digital con prompt:", prompt);
+    }, 2000);
+  };
 
   return (
     <div className="flex min-h-screen flex-col bg-[#e0e5ec] text-[#2c3e50] selection:bg-[#0891b2]/20 selection:text-[#164e63]">
-      {/* Navigation */}
-      <header className="fixed top-0 z-50 w-full bg-[#e0e5ec]/90 backdrop-blur-sm border-b border-gray-300/50">
-        <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
-          <div className="flex items-center gap-3">
-            <img src="/images/logo-black.png" alt="Lofty Apps" className="h-10 w-auto" />
-          </div>
-          <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
-            <Link href="/documentacion" className="hover:text-[#0891b2] transition-colors">
-              Documentación
-            </Link>
-            <Link href="/plantillas" className="hover:text-[#0891b2] transition-colors">
-              Plantillas
-            </Link>
-            <Link href="/precios" className="hover:text-[#0891b2] transition-colors">
-              Precios
-            </Link>
-          </nav>
-          <div className="flex items-center gap-4">
-            <CurrencySelector />
-            <Link href="/login" className="hidden text-sm font-medium text-gray-600 hover:text-[#1a202c] md:block">
-              Iniciar Sesión
-            </Link>
-            <button className="neu-btn px-6 py-2.5 text-sm font-bold">Comenzar</button>
-          </div>
-        </div>
-      </header>
-
       <main className="flex-1 pt-24">
         {/* Hero Section */}
         <section className="relative overflow-hidden py-20 md:py-32">
@@ -73,8 +56,9 @@ export default function LandingPage() {
 
             <ScrollReveal direction="up" delay={200}>
               <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-600 md:text-xl leading-relaxed">
-                La plataforma completa para construir, lanzar y escalar tus aplicaciones. Deja de configurar
-                infraestructura y comienza a innovar con Lofty.
+                La plataforma completa para construir, lanzar y escalar tus
+                aplicaciones. Deja de configurar infraestructura y comienza a
+                innovar con Lofty.
               </p>
             </ScrollReveal>
 
@@ -108,7 +92,8 @@ export default function LandingPage() {
                   </button>
                 </div>
                 <p className="mt-4 text-sm text-gray-500">
-                  Prueba gratis, sin tarjeta de crédito. Crea tu primer producto digital en segundos.
+                  Prueba gratis, sin tarjeta de crédito. Crea tu primer producto
+                  digital en segundos.
                 </p>
               </div>
             </ScrollReveal>
@@ -122,25 +107,33 @@ export default function LandingPage() {
                       Todo lo que necesitas para construir.
                     </h2>
                     <p className="text-lg text-gray-600">
-                      Lofty Apps te ofrece los bloques de construcción para crear aplicaciones poderosas sin escribir
-                      una sola línea de código.
+                      Lofty Apps te ofrece los bloques de construcción para
+                      crear aplicaciones poderosas sin escribir una sola línea
+                      de código.
                     </p>
                   </div>
                 </ScrollReveal>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                   {/* Feature 1 */}
-                  <ScrollReveal direction="up" delay={0} className="md:col-span-2">
+                  <ScrollReveal
+                    direction="up"
+                    delay={0}
+                    className="md:col-span-2"
+                  >
                     <div className="neu-flat p-8 group transition-transform hover:-translate-y-1">
                       <div className="flex flex-col md:flex-row gap-8 items-start">
                         <div className="flex-1">
                           <div className="neu-icon-box h-14 w-14 text-blue-500 mb-6 rounded-2xl">
                             <Building2 className="h-7 w-7" />
                           </div>
-                          <h3 className="text-2xl font-bold text-[#1a202c] mb-3">Constructor Visual</h3>
+                          <h3 className="text-2xl font-bold text-[#1a202c] mb-3">
+                            Constructor Visual
+                          </h3>
                           <p className="text-gray-600 leading-relaxed">
-                            Arrastra y suelta componentes para construir tu interfaz. Lo que ves es exactamente lo que
-                            obtienes. Responsivo por defecto.
+                            Arrastra y suelta componentes para construir tu
+                            interfaz. Lo que ves es exactamente lo que obtienes.
+                            Responsivo por defecto.
                           </p>
                         </div>
                         <div className="flex-1 w-full">
@@ -163,14 +156,19 @@ export default function LandingPage() {
                       <div className="neu-icon-box h-14 w-14 text-purple-500 mb-6 rounded-2xl">
                         <Play className="h-7 w-7" />
                       </div>
-                      <h3 className="text-2xl font-bold text-[#1a202c] mb-3">Despliegue Instantáneo</h3>
+                      <h3 className="text-2xl font-bold text-[#1a202c] mb-3">
+                        Despliegue Instantáneo
+                      </h3>
                       <p className="text-gray-600 leading-relaxed mb-8">
-                        Publica a producción en segundos. CDN global, SSL y escalado manejados automáticamente.
+                        Publica a producción en segundos. CDN global, SSL y
+                        escalado manejados automáticamente.
                       </p>
                       <div className="flex justify-center">
                         <div className="neu-pressed h-24 w-24 rounded-full flex items-center justify-center relative">
                           <div className="absolute inset-0 rounded-full border-t-2 border-purple-500 animate-spin" />
-                          <span className="font-mono text-purple-500 font-bold">0.2s</span>
+                          <span className="font-mono text-purple-500 font-bold">
+                            0.2s
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -182,10 +180,12 @@ export default function LandingPage() {
                       <div className="neu-icon-box h-14 w-14 text-pink-500 mb-6 rounded-2xl">
                         <Code2 className="h-7 w-7" />
                       </div>
-                      <h3 className="text-2xl font-bold text-[#1a202c] mb-3">Flujos de Lógica</h3>
+                      <h3 className="text-2xl font-bold text-[#1a202c] mb-3">
+                        Flujos de Lógica
+                      </h3>
                       <p className="text-gray-600 leading-relaxed">
-                        Construye lógica compleja visualmente. Conecta acciones, disparadores y bases de datos con
-                        facilidad.
+                        Construye lógica compleja visualmente. Conecta acciones,
+                        disparadores y bases de datos con facilidad.
                       </p>
                       <div className="mt-8 neu-pressed p-4 rounded-xl">
                         <div className="flex items-center gap-2 text-xs text-pink-500 font-mono">
@@ -202,23 +202,32 @@ export default function LandingPage() {
                   </ScrollReveal>
 
                   {/* Feature 4 */}
-                  <ScrollReveal direction="up" delay={300} className="md:col-span-2">
+                  <ScrollReveal
+                    direction="up"
+                    delay={300}
+                    className="md:col-span-2"
+                  >
                     <div className="neu-flat p-8 group transition-transform hover:-translate-y-1">
                       <div className="flex flex-col md:flex-row-reverse gap-8 items-start">
                         <div className="flex-1">
                           <div className="neu-icon-box h-10 w-10 text-emerald-500 mb-6 rounded-2xl">
                             <Users className="h-7 w-7" />
                           </div>
-                          <h3 className="text-2xl font-bold text-[#1a202c] mb-3">Base de Datos Global</h3>
+                          <h3 className="text-2xl font-bold text-[#1a202c] mb-3">
+                            Base de Datos Global
+                          </h3>
                           <p className="text-gray-600 leading-relaxed">
-                            Base de datos integrada en tiempo real que escala con tus usuarios. No requiere
-                            conocimientos de SQL.
+                            Base de datos integrada en tiempo real que escala
+                            con tus usuarios. No requiere conocimientos de SQL.
                           </p>
                         </div>
                         <div className="flex-1 w-full">
                           <div className="neu-pressed h-48 w-full rounded-xl p-4 flex flex-col gap-3 justify-center">
                             {[1, 2, 3].map((i) => (
-                              <div key={i} className="neu-flat-sm h-10 w-full flex items-center px-4 gap-3">
+                              <div
+                                key={i}
+                                className="neu-flat-sm h-10 w-full flex items-center px-4 gap-3"
+                              >
                                 <div className="h-2 w-2 rounded-full bg-emerald-500" />
                                 <div className="h-2 w-20 bg-gray-400 rounded-full" />
                                 <div className="h-2 w-10 bg-gray-500 rounded-full ml-auto" />
@@ -245,8 +254,8 @@ export default function LandingPage() {
                       ¿Listo para construir tu próxima gran idea?
                     </h2>
                     <p className="mx-auto max-w-xl text-lg text-gray-600 mb-10 relative z-10">
-                      Únete a miles de creadores que están construyendo el futuro con Lofty Apps. No requiere tarjeta de
-                      crédito.
+                      Únete a miles de creadores que están construyendo el
+                      futuro con Lofty Apps. No requiere tarjeta de crédito.
                     </p>
                     <div className="flex flex-col items-center justify-center gap-6 sm:flex-row relative z-10">
                       <button className="neu-btn-primary h-14 px-10 text-lg font-bold w-full sm:w-auto">
@@ -274,10 +283,14 @@ export default function LandingPage() {
             <ScrollReveal direction="up" delay={100}>
               <div className="flex flex-wrap items-center justify-center gap-12 md:gap-20 opacity-30 grayscale">
                 <div className="text-2xl font-black text-[#2c3e50]">ACME</div>
-                <div className="text-2xl font-black text-[#2c3e50]">GlobalBank</div>
+                <div className="text-2xl font-black text-[#2c3e50]">
+                  GlobalBank
+                </div>
                 <div className="text-2xl font-black text-[#2c3e50]">Nebula</div>
                 <div className="text-2xl font-black text-[#2c3e50]">Vertex</div>
-                <div className="text-2xl font-black text-[#2c3e50]">Horizon</div>
+                <div className="text-2xl font-black text-[#2c3e50]">
+                  Horizon
+                </div>
               </div>
             </ScrollReveal>
           </div>
@@ -290,62 +303,100 @@ export default function LandingPage() {
           <div className="grid grid-cols-2 gap-10 md:grid-cols-4">
             <div className="col-span-2">
               <div className="flex items-center gap-3 mb-6">
-                <img src="/images/logo-black.png" alt="Lofty Apps" className="h-10 w-auto" />
+                <img
+                  src="/images/logo-black.png"
+                  alt="Lofty Apps"
+                  className="h-10 w-auto"
+                />
               </div>
               <p className="text-sm text-gray-600 max-w-xs leading-relaxed mb-6">
-                La plataforma completa para construir aplicaciones web sin código. Empoderando creadores en todo el
-                mundo.
+                La plataforma completa para construir aplicaciones web sin
+                código. Empoderando creadores en todo el mundo.
               </p>
               <div className="flex gap-4">
-                <Link href="#" className="neu-icon-box h-10 w-10 text-gray-600 hover:text-[#0891b2] transition-colors">
+                <Link
+                  href="#"
+                  className="neu-icon-box h-10 w-10 text-gray-600 hover:text-[#0891b2] transition-colors"
+                >
                   <Instagram className="h-5 w-5" />
                 </Link>
-                <Link href="#" className="neu-icon-box h-10 w-10 text-gray-600 hover:text-[#0891b2] transition-colors">
+                <Link
+                  href="#"
+                  className="neu-icon-box h-10 w-10 text-gray-600 hover:text-[#0891b2] transition-colors"
+                >
                   <Facebook className="h-5 w-5" />
                 </Link>
-                <Link href="#" className="neu-icon-box h-10 w-10 text-gray-600 hover:text-[#0891b2] transition-colors">
+                <Link
+                  href="#"
+                  className="neu-icon-box h-10 w-10 text-gray-600 hover:text-[#0891b2] transition-colors"
+                >
                   <Linkedin className="h-5 w-5" />
                 </Link>
-                <Link href="#" className="neu-icon-box h-10 w-10 text-gray-600 hover:text-[#0891b2] transition-colors">
+                <Link
+                  href="#"
+                  className="neu-icon-box h-10 w-10 text-gray-600 hover:text-[#0891b2] transition-colors"
+                >
                   <Youtube className="h-5 w-5" />
                 </Link>
               </div>
             </div>
             <div>
-              <h3 className="text-sm font-bold text-[#1a202c] mb-6 uppercase tracking-wider">Producto</h3>
+              <h3 className="text-sm font-bold text-[#1a202c] mb-6 uppercase tracking-wider">
+                Producto
+              </h3>
               <ul className="space-y-4 text-sm text-gray-600">
                 <li>
-                  <Link href="/documentacion" className="hover:text-[#0891b2] transition-colors">
+                  <Link
+                    href="/documentacion"
+                    className="hover:text-[#0891b2] transition-colors"
+                  >
                     Documentación
                   </Link>
                 </li>
                 <li>
-                  <Link href="/plantillas" className="hover:text-[#0891b2] transition-colors">
+                  <Link
+                    href="/plantillas"
+                    className="hover:text-[#0891b2] transition-colors"
+                  >
                     Plantillas
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-[#0891b2] transition-colors">
+                  <Link
+                    href="#"
+                    className="hover:text-[#0891b2] transition-colors"
+                  >
                     Integraciones
                   </Link>
                 </li>
                 <li>
-                  <Link href="/precios" className="hover:text-[#0891b2] transition-colors">
+                  <Link
+                    href="/precios"
+                    className="hover:text-[#0891b2] transition-colors"
+                  >
                     Precios
                   </Link>
                 </li>
               </ul>
             </div>
             <div>
-              <h3 className="text-sm font-bold text-[#1a202c] mb-6 uppercase tracking-wider">Compañía</h3>
+              <h3 className="text-sm font-bold text-[#1a202c] mb-6 uppercase tracking-wider">
+                Compañía
+              </h3>
               <ul className="space-y-4 text-sm text-gray-600">
                 <li>
-                  <Link href="/terms" className="hover:text-[#0891b2] transition-colors">
+                  <Link
+                    href="/terms"
+                    className="hover:text-[#0891b2] transition-colors"
+                  >
                     Términos y Condiciones
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-[#0891b2] transition-colors">
+                  <Link
+                    href="#"
+                    className="hover:text-[#0891b2] transition-colors"
+                  >
                     Políticas de Privacidad
                   </Link>
                 </li>
@@ -353,10 +404,12 @@ export default function LandingPage() {
             </div>
           </div>
           <div className="mt-16 border-t border-gray-300/50 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-xs text-gray-500">© 2025 Lofty Apps Inc. Todos los derechos reservados.</p>
+            <p className="text-xs text-gray-500">
+              © 2025 Lofty Apps Inc. Todos los derechos reservados.
+            </p>
           </div>
         </div>
       </footer>
     </div>
-  )
+  );
 }
