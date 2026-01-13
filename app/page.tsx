@@ -32,12 +32,20 @@ export default function LandingPage() {
 
   return (
     <div className="flex min-h-screen flex-col bg-[#e0e5ec] text-[#2c3e50] selection:bg-[#0891b2]/20 selection:text-[#164e63]">
+      <style jsx>{`
+        @media (min-width: 1200px) {
+          .container-xl {
+            width: 90% !important;
+            max-width: 90% !important;
+          }
+        }
+      `}</style>
       <main className="flex-1 pt-24">
         {/* Hero Section */}
         <section className="relative overflow-hidden py-20 md:py-32">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-[#0891b2]/10 rounded-full blur-[120px] pointer-events-none" />
 
-          <div className="container relative mx-auto px-4 text-center md:px-6">
+          <div className="container container-xl relative mx-auto px-4 text-center md:px-6">
             <ScrollReveal direction="fade" delay={0}>
               <div className="inline-flex items-center neu-pressed px-4 py-2 text-sm text-gray-600 mb-8 rounded-full">
                 <span className="flex h-2 w-2 rounded-full bg-[#0891b2] mr-3 shadow-[0_0_10px_#0891b2]"></span>
@@ -100,7 +108,7 @@ export default function LandingPage() {
 
             {/* Features Grid */}
             <section id="features" className="py-24 md:py-32 bg-[#e0e5ec]">
-              <div className="container mx-auto px-4 md:px-6">
+              <div className="container container-xl mx-auto px-4 md:px-6">
                 <ScrollReveal direction="up" delay={0}>
                   <div className="mb-20 md:text-center max-w-3xl mx-auto">
                     <h2 className="text-3xl font-bold tracking-tight text-[#1a202c] md:text-5xl mb-6">
@@ -244,7 +252,7 @@ export default function LandingPage() {
 
             {/* CTA Section */}
             <section className="relative py-24 md:py-32 overflow-hidden">
-              <div className="container relative mx-auto px-4 text-center md:px-6">
+              <div className="container container-xl relative mx-auto px-4 text-center md:px-6">
                 <ScrollReveal direction="up" delay={0}>
                   <div className="neu-flat p-12 md:p-20 max-w-5xl mx-auto relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-64 h-64 bg-[#0891b2]/10 blur-[80px] rounded-full pointer-events-none" />
@@ -274,7 +282,7 @@ export default function LandingPage() {
 
         {/* Social Proof */}
         <section className="py-12 bg-[#e0e5ec]">
-          <div className="container mx-auto px-4 md:px-6">
+          <div className="container container-xl mx-auto px-4 md:px-6">
             <ScrollReveal direction="fade" delay={0}>
               <p className="text-center text-sm font-bold tracking-widest text-gray-500 mb-10">
                 CONFIADO POR EQUIPOS INNOVADORES
@@ -299,7 +307,7 @@ export default function LandingPage() {
 
       {/* Footer */}
       <footer className="border-t border-gray-300/50 bg-[#e0e5ec] py-16">
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="container container-xl mx-auto px-4 md:px-6">
           <div className="grid grid-cols-2 gap-10 md:grid-cols-4">
             <div className="col-span-2">
               <div className="flex items-center gap-3 mb-6">
