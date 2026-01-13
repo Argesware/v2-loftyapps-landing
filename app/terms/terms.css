@@ -70,6 +70,12 @@
   width: 75%;
 }
 
+@media (max-width: 900px) {
+  .terms-container {
+    width: 90%;
+  }
+}
+
 @media (max-width: 640px) {
   .terms-container {
     width: 90%;
