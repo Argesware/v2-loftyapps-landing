@@ -43,11 +43,15 @@ export default function PrivacyPolitics() {
               <SafeHTML html={data.text1InfoUse} />
               <SafeHTML html={data.text2InfoUse} />
               <SafeHTML html={data.text3InfoUse} />
-              <SafeHTML html={data.text4InfoUse} />
-              <SafeHTML html={data.text5InfoUse} />
-              <SafeHTML html={data.text6InfoUse} />
-              <SafeHTML html={data.text7InfoUse} />
-              <SafeHTML html={data.text8InfoUse} />
+              <div className="textP">
+                <ul className="list-disc pl-6">
+                  <li>{data.text4InfoUse}</li>
+                  <li>{data.text5InfoUse}</li>
+                  <li>{data.text6InfoUse}</li>
+                  <li>{data.text7InfoUse}</li>
+                  <li>{data.text8InfoUse}</li>
+                </ul>
+              </div>
               <SafeHTML html={data.text9InfoUse} />
             </div>
           </section>
