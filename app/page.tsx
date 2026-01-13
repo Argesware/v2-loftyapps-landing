@@ -39,8 +39,12 @@ export default function LandingPage() {
             max-width: 90% !important;
           }
           .textarea-xl {
-            width: 70% !important;
-            max-width: 70% !important;
+            width: 85% !important;
+            max-width: 85% !important;
+          }
+          .cta-xl {
+            width: 80% !important;
+            max-width: 80% !important;
           }
         }
       `}</style>
@@ -258,7 +262,7 @@ export default function LandingPage() {
             <section className="relative py-24 md:py-32 overflow-hidden">
               <div className="container container-xl relative mx-auto px-4 text-center md:px-6">
                 <ScrollReveal direction="up" delay={0}>
-                  <div className="neu-flat p-12 md:p-20 max-w-5xl mx-auto relative overflow-hidden">
+                  <div className="neu-flat p-12 md:p-20 max-w-5xl mx-auto relative overflow-hidden cta-xl">
                     <div className="absolute top-0 right-0 w-64 h-64 bg-[#0891b2]/10 blur-[80px] rounded-full pointer-events-none" />
                     <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/10 blur-[80px] rounded-full pointer-events-none" />
 
