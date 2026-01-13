@@ -38,6 +38,10 @@ export default function LandingPage() {
             width: 90% !important;
             max-width: 90% !important;
           }
+          .textarea-xl {
+            width: 70% !important;
+            max-width: 70% !important;
+          }
         }
       `}</style>
       <main className="flex-1 pt-24">
@@ -71,7 +75,7 @@ export default function LandingPage() {
             </ScrollReveal>
 
             <ScrollReveal direction="up" delay={300}>
-              <div className="mx-auto mt-12 max-w-3xl">
+              <div className="mx-auto mt-12 max-w-3xl textarea-xl">
                 <div className="neu-flat rounded-2xl p-2">
                   <textarea
                     value={prompt}
