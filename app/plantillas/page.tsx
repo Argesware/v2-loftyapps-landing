@@ -99,8 +99,8 @@ export default function PlantillasPage() {
 
       <main className="flex-1 pt-24">
         {/* Hero Section */}
-        <section className="py-20 px-4 md:px-6">
-          <div className="container mx-auto max-w-6xl">
+        <section className="py-20 px-4 md:px-6 lg:px-12 2xl:px-32">
+          <div>
             <ScrollReveal>
               <div className="text-center mb-16">
                 <h1 className="text-4xl md:text-6xl font-black mb-6 text-balance leading-tight">
