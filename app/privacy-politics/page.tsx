@@ -1,5 +1,5 @@
 import data from '../textdata/tc.json'
-import './politica-privacidad.css'
+import './privacy-politics.css'
 
 const SafeHTML = ({ html }: { html?: string }) => {
   if (!html) return null;
