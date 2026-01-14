@@ -39,12 +39,20 @@ export default function LandingPage() {
             max-width: 90% !important;
           }
           .textarea-xl {
-            width: 85% !important;
-            max-width: 85% !important;
+            width: 75% !important;
+            max-width: 75% !important;
           }
           .cta-xl {
             width: 80% !important;
             max-width: 80% !important;
+          }
+        }
+        /* Fix logic flow text overflow between 768px and 1023px */
+        @media (min-width: 768px) and (max-width: 1023px) {
+          .logic-flow-break {
+            white-space: pre-line !important;
+            word-break: break-word !important;
+            font-size: 0.95rem !important;
           }
         }
       `}</style>
@@ -203,17 +211,19 @@ export default function LandingPage() {
                         Construye lógica compleja visualmente. Conecta acciones,
                         disparadores y bases de datos con facilidad.
                       </p>
-                      <div className="mt-8 neu-pressed p-4 rounded-xl">
-                        <div className="flex items-center gap-2 text-xs text-pink-500 font-mono">
-                          <div className="h-2 w-2 rounded-full bg-pink-500" />
-                          si (usuario.conectado)
+                        <div className="mt-8 neu-pressed p-4 rounded-xl">
+                          <div className="flex flex-col logic-flow-break text-xs font-mono">
+                            <span className="flex items-center gap-2 text-pink-500">
+                              <div className="h-2 w-2 rounded-full bg-pink-500" />
+                              si (usuario.conectado)
+                            </span>
+                            <div className="ml-4 mt-2 h-px w-4 bg-gray-400" />
+                            <span className="flex items-center gap-2 text-green-500 mt-1 ml-8">
+                              <div className="h-2 w-2 rounded-full bg-green-500" />
+                              redirigir('/panel')
+                            </span>
+                          </div>
                         </div>
-                        <div className="ml-4 mt-2 h-px w-4 bg-gray-400" />
-                        <div className="ml-8 flex items-center gap-2 text-xs text-green-500 font-mono mt-1">
-                          <div className="h-2 w-2 rounded-full bg-green-500" />
-                          redirigir('/panel')
-                        </div>
-                      </div>
                     </div>
                   </ScrollReveal>
 
