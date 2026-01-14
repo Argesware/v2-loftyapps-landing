@@ -14,8 +14,8 @@ export default function HeaderNavbar() {
   return (
     <header className="fixed top-0 z-50 w-full bg-[#e0e5ec]/90 backdrop-blur-sm border-b border-gray-300/50">
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
-        <Link href="/" className="flex items-center gap-3">
-          <img src="/images/logo-black.png" alt="Lofty Apps" className="h-10 w-auto" />
+        <Link href="/" className="flex items-center min-w-0 flex-shrink-0" style={{width: '18%'}}>
+          <img src="/images/logo-black.png" alt="Lofty Apps" className="w-full max-w-xs h-auto m-0 p-0" />
         </Link>
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
@@ -58,7 +58,6 @@ export default function HeaderNavbar() {
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
             >
               {menuOpen ? (
                 // X icon
