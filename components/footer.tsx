@@ -8,11 +8,7 @@ export default function Footer() {
           <div className="grid grid-cols-2 gap-10 md:grid-cols-4">
             <div className="col-span-2">
               <div className="flex items-center gap-3 mb-6">
-                <img
-                  src="/images/logo-black.png"
-                  alt="Lofty Apps"
-                  className="h-10 w-auto"
-                />
+                <img src="/images/logo-black.png" alt="Lofty Apps" className="w-40 max-w-[35%] h-auto m-0 p-0" />
               </div>
               <p className="text-sm text-gray-600 max-w-xs leading-relaxed mb-6">
                 La plataforma completa para construir aplicaciones web sin
