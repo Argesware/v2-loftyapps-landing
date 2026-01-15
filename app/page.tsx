@@ -284,10 +284,18 @@ export default function LandingPage() {
                       futuro con Lofty Apps. No requiere tarjeta de crédito.
                     </p>
                     <div className="flex flex-col items-center justify-center gap-6 sm:flex-row relative z-10">
-                      <button className="neu-btn-primary h-14 px-10 text-lg font-bold w-full sm:w-auto">
+                         <button
+                        className="neu-btn-primary h-14 px-10 text-lg font-bold w-full sm:w-auto"
+                        onClick={() => {
+                          window.location.href = "https://platform.loftyapps.com/";
+                        }}
+                      >
                         Comienza a Construir Ahora
                       </button>
-                      <button className="neu-btn h-14 px-10 text-lg font-medium w-full sm:w-auto">
+                      <button className="neu-btn h-14 px-10 text-lg font-medium w-full sm:w-auto"
+                      onClick={() => {
+                          window.location.href = "https://calendly.com/argesware/30min";
+                        }}>
                         Contacta Ventas
                       </button>
                     </div>

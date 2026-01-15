@@ -51,7 +51,7 @@ export default function HeaderNavbar() {
           <Link href="https://platform.loftyapps.com/" className="hidden text-sm font-medium text-gray-600 hover:text-[#1a202c] md:block">
             Iniciar Sesión
           </Link>
-          <Link href="https://platform.loftyapps.com/">
+          <Link href="https://platform.loftyapps.com/register">
             <button className="neu-btn px-6 py-2.5 text-sm font-bold btn-tablet">Comenzar</button>
           </Link>
           {/* Hamburger Icon moved here */}
