@@ -224,7 +224,7 @@ export default function PlantillasPage() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-[#0891b2] transition-colors">
+                  <Link href="/privacy-politics" className="hover:text-[#0891b2] transition-colors">
                     Políticas de Privacidad
                   </Link>
                 </li>
