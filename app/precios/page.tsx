@@ -74,6 +74,10 @@ export default function PreciosPage() {
     return `$${priceUSD}`
   }
 
+  function redirectTo() {
+    window.open('https://platform.loftyapps.com', "_blank");
+  }
+
   return (
     <div className="flex min-h-screen flex-col bg-[#e0e5ec] text-[#2c3e50]">
       {/* Navigation */}
@@ -148,7 +152,12 @@ export default function PreciosPage() {
                     </div>
                   </div>
 
-                  <button className="neu-btn w-full py-3 font-bold mb-8">Comenzar Gratis</button>
+                  <button
+                    className="neu-btn w-full py-3 font-bold mb-8"
+                    onClick={() => redirectTo()}
+                  >
+                    Comenzar Gratis
+                  </button>
 
                   <div className="space-y-4 flex-1">
                     {pricingData.gratuito.features.map((feature, idx) => (
@@ -191,7 +200,10 @@ export default function PreciosPage() {
                     <p className="text-xs text-gray-500 mt-2">Facturado mensualmente</p>
                   </div>
 
-                  <button className="neu-btn-primary w-full py-3 font-bold mb-8 flex items-center justify-center gap-2">
+                  <button
+                    className="neu-btn-primary w-full py-3 font-bold mb-8 flex items-center justify-center gap-2"
+                    onClick={() => redirectTo()}
+                  >
                     Comenzar Ahora <ArrowRight className="h-4 w-4" />
                   </button>
 
@@ -226,7 +238,12 @@ export default function PreciosPage() {
                     <p className="text-xs text-gray-500 mt-2">Facturado mensualmente</p>
                   </div>
 
-                  <button className="neu-btn w-full py-3 font-bold mb-8">Comenzar Ahora</button>
+                  <button
+                    className="neu-btn w-full py-3 font-bold mb-8"
+                    onClick={() => redirectTo()}
+                  >
+                    Comenzar Ahora
+                  </button>
 
                   <div className="space-y-4 flex-1">
                     {pricingData.medio.features.map((feature, idx) => (
@@ -259,7 +276,12 @@ export default function PreciosPage() {
                     <p className="text-xs text-gray-500 mt-2">Facturado mensualmente</p>
                   </div>
 
-                  <button className="neu-btn w-full py-3 font-bold mb-8">Comenzar Ahora</button>
+                  <button
+                    className="neu-btn w-full py-3 font-bold mb-8"
+                    onClick={() => redirectTo()}
+                  >
+                    Comenzar Ahora
+                  </button>
 
                   <div className="space-y-4 flex-1">
                     {pricingData.avanzado.features.map((feature, idx) => (
