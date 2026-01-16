@@ -13,7 +13,7 @@ const SafeHTML = ({ html }: { html?: string }) => {
 
 export default function TermsConditions() {
   return (
-    <div className="min-h-screen py-8 px-4">
+    <div className="min-h-screen py-8 px-4 pt-24">
       <div className="terms-container mx-auto">
         <article className="prose prose-lg max-w-none">
           <h1
