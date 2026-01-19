@@ -74,6 +74,10 @@ export default function PreciosPage() {
     return `$${priceUSD}`
   }
 
+  function redirectTo() {
+    window.open('https://platform.loftyapps.com', "_blank");
+  }
+
   return (
     <div className="flex min-h-screen flex-col bg-[#e0e5ec] text-[#2c3e50]">
       <main className="flex-1 pt-24">
@@ -101,7 +105,7 @@ export default function PreciosPage() {
         </section>
 
         {/* Pricing Cards */}
-        <section className="py-12 md:py-20">
+        <section className="py-12 md:py-20" id="lofty-price-section">
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
               {/* Free Plan */}
@@ -121,7 +125,12 @@ export default function PreciosPage() {
                     </div>
                   </div>
 
-                  <button className="neu-btn w-full py-3 font-bold mb-8">Comenzar Gratis</button>
+                  <button
+                    className="neu-btn w-full py-3 font-bold mb-8"
+                    onClick={() => redirectTo()}
+                  >
+                    Comenzar Gratis
+                  </button>
 
                   <div className="space-y-4 flex-1">
                     {pricingData.gratuito.features.map((feature, idx) => (
@@ -164,7 +173,10 @@ export default function PreciosPage() {
                     <p className="text-xs text-gray-500 mt-2">Facturado mensualmente</p>
                   </div>
 
-                  <button className="neu-btn-primary w-full py-3 font-bold mb-8 flex items-center justify-center gap-2">
+                  <button
+                    className="neu-btn-primary w-full py-3 font-bold mb-8 flex items-center justify-center gap-2"
+                    onClick={() => redirectTo()}
+                  >
                     Comenzar Ahora <ArrowRight className="h-4 w-4" />
                   </button>
 
@@ -199,7 +211,12 @@ export default function PreciosPage() {
                     <p className="text-xs text-gray-500 mt-2">Facturado mensualmente</p>
                   </div>
 
-                  <button className="neu-btn w-full py-3 font-bold mb-8">Comenzar Ahora</button>
+                  <button
+                    className="neu-btn w-full py-3 font-bold mb-8"
+                    onClick={() => redirectTo()}
+                  >
+                    Comenzar Ahora
+                  </button>
 
                   <div className="space-y-4 flex-1">
                     {pricingData.medio.features.map((feature, idx) => (
@@ -232,7 +249,12 @@ export default function PreciosPage() {
                     <p className="text-xs text-gray-500 mt-2">Facturado mensualmente</p>
                   </div>
 
-                  <button className="neu-btn w-full py-3 font-bold mb-8">Comenzar Ahora</button>
+                  <button
+                    className="neu-btn w-full py-3 font-bold mb-8"
+                    onClick={() => redirectTo()}
+                  >
+                    Comenzar Ahora
+                  </button>
 
                   <div className="space-y-4 flex-1">
                     {pricingData.avanzado.features.map((feature, idx) => (
@@ -327,10 +349,18 @@ export default function PreciosPage() {
                   Únete a miles de creadores construyendo aplicaciones increíbles con Lofty Apps.
                 </p>
                 <div className="flex flex-col items-center justify-center gap-6 sm:flex-row relative z-10">
-                  <button className="neu-btn-primary h-14 px-10 text-lg font-bold w-full sm:w-auto flex items-center justify-center gap-2">
+                  <button
+                    className="neu-btn-primary h-14 px-10 text-lg font-bold w-full sm:w-auto flex items-center justify-center gap-2"
+                    onClick={() => redirectTo()} 
+                  >
                     Comenzar Gratis <ArrowRight className="h-5 w-5" />
                   </button>
-                  <button className="neu-btn h-14 px-10 text-lg font-medium w-full sm:w-auto">Comparar Planes</button>
+                  <button
+                    className="neu-btn h-14 px-10 text-lg font-medium w-full sm:w-auto"
+                    onClick={() => window.location.href="#lofty-price-section"}
+                  >
+                    Comparar Planes
+                  </button>
                 </div>
               </div>
             </ScrollReveal>
