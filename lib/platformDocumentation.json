@@ -1,0 +1,873 @@
+{
+  "sections": [
+    {
+      "title": "Dashboard Principal",
+      "id": "main_dashboard",
+      "subsections": [
+        {
+          "title": "Dashboard",
+          "id": "dashboard_init",
+          "content": [
+            {
+              "textinfo": "En la página principal de Lofty Apps se encuentra lo que es el Dashboard principal, donde tenemos las opciones principales del usuario en el menú de la izquierda, una barra buscadora, y las opciones en la parte derecha (mostrar tutorial, campana de notificaciones, y perfil del usuario activo)."
+            },
+            {
+              "imagedata": "dashboard_init",
+              "descriptionImage": "Ventana Principal de Lofty Apps"
+            }
+          ]
+        },
+        {
+          "title": "Menú de Navegación Lateral",
+          "id": "sidebar_init",
+          "content": [
+            {
+              "textinfo": "Las opciones que se encuentran en el menú de la izquierda en la pagina principal es el gestor de proyectos, la sección de plantillas donde se visualizan todas las plantillas que el usuario puede comprar para crear nuevos proyectos, las invitaciones a proyectos para colaborar, la sección de perfil del usuario donde se muestra la información del usuario creado, y una sección de actividades donde se estaría mostrando toda la información con respecto a actividades realizadas por el usuario."
+            },
+            {
+              "imagedata": "sidebar_init",
+              "descriptionImage": "Menu De Navegacion Lateral"
+            }
+          ]
+        },
+        {
+          "title": "Creacion de Proyectos",
+          "id": "create_project_init",
+          "content": [
+            {
+              "textinfo": "En la seccion de gestión de proyectos se encuentra un botón para crear proyectos. Al hacer click en este botón, se mostrará un modal o un dialogo para crear el proyecto. Los campos principales son el nombre del proyecto, su slug que sería un nombre único para el proyecto, una descripción del proyecto, y la opción de que tendrá sistema de usuarios."
+            },
+            {
+              "imagedata": "create_project_init",
+              "descriptionImage": "Dialogo de Creacion de Proyectos"
+            },
+            {
+              "textinfo": "Si el proyecto necesita manejar información de usuarios, es necesario habilitar la opción de sistema de usuario para manejar credenciales de usuarios creadas en la aplicación."
+            },
+            {
+              "imagedata": "create_project_init_system_user",
+              "descriptionImage": "Dialogo de Creacion de Proyectos"
+            }
+          ]
+        },
+        {
+          "title": "Plantillas",
+          "id": "buy_templates_init",
+          "content": [
+            {
+              "textinfo": "En la seccion de plantillas se encuentran las plantillas disponibles para comprar y empezar tu proyecto con una base."
+            },
+            {
+              "imagedata": "buy_templates_init",
+              "descriptionImage": "Dialogo de Plantillas"
+            }
+          ]
+        },
+        {
+          "title": "Invitaciones",
+          "id": "project_invites_init",
+          "content": [
+            {
+              "textinfo": "Es el lugar donde se reciben las invitaciones a colaborar en diferentes proyectos. Y donde tus colaboradores recibiran la invitación."
+            },
+            {
+              "imagedata": "project_invites_init",
+              "descriptionImage": "Dialogo de Invitaciones"
+            }
+          ]
+        },
+        {
+          "title": "Mi Perfil",
+          "id": "my_profile_init",
+          "content": [
+            {
+              "textinfo": "Es el lugar donde aparecerá toda la información personal que se hace desde el registro donde se puede actualizar y adicionalmente se puede cambiar la contraseña."
+            },
+            {
+              "imagedata": "my_profile_init",
+              "descriptionImage": "Dialogo de Plantillas"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Dashboards del Proyecto",
+      "id": "project_dashboard",
+      "subsections": [
+        {
+          "title": "Dashboard Inicial del Proyecto",
+          "id": "project_dashboard_init",
+          "content": [
+            {
+              "textinfo": "La pagina principal de un proyecto contiene también un menú lateral con varias opciones, y su vista principal es un resumen general sobre el proyecto. Entre las opciones del menú lateral se encuentra:"
+            },
+            {
+              "listData": [
+                {
+                  "bulletPoint": "Dashboard:",
+                  "infoBulletPoint": "que sería la vista principal del proyecto."
+                },
+                {
+                  "bulletPoint": "Colección de Datos:",
+                  "infoBulletPoint": "donde se encuentran todas las colecciones de datos del proyecto para almacenar toda información ingresada en el proyecto."
+                },
+                {
+                  "bulletPoint": "Páginas:",
+                  "infoBulletPoint": "en donde se encuentra las páginas creadas del proyecto."
+                },
+                {
+                  "bulletPoint": "Usuarios:",
+                  "infoBulletPoint": "en donde se gestiona el sistema de Usuarios en caso de haber habilitado la opción de [Sistema de Usuario] en la creación del proyecto."
+                },
+                {
+                  "bulletPoint": "Equipo:",
+                  "infoBulletPoint": "en donde se gestiona a los miembros del equipo o colaboradores de un proyecto."
+                },
+                {
+                  "bulletPoint": "Plugins:",
+                  "infoBulletPoint": "o la sección donde se gestionan funciones adicionales al proyecto como generador de PDF."
+                },
+                {
+                  "bulletPoint": "Método de pago:",
+                  "infoBulletPoint": "Desde donde se puede configurar los métodos de pago de tu página, desde la cuenta y como se recibe el dinero, como se guarda la información de los pagos hasta que tipo de pagos se quieren recibir (Link de pago, Servicio o Carrito)."
+                },
+                {
+                  "bulletPoint": "Cron jobs:",
+                  "infoBulletPoint": "Es la sección donde se pueden configurar tareas programadas que se ejecutan automáticamente en intervalos regulares de tiempo."
+                },
+                {
+                  "bulletPoint": "API Key Test",
+                  "infoBulletPoint": "Permite configurar llaves de acceso de consulta para software de terceros."
+                },
+                {
+                  "bulletPoint": "Multimedia:",
+                  "infoBulletPoint": "en donde se encuentra toda la multimedia que se haya ingresado al proyecto (como imágenes que se guardan al crear una página)."
+                },
+                {
+                  "bulletPoint": "Actividad:",
+                  "infoBulletPoint": "donde está la bitácora principal del proyecto."
+                },
+                {
+                  "bulletPoint": "Configuración:",
+                  "infoBulletPoint": "donde están las configuraciones principales y credenciales del proyecto. "
+                },
+                {
+                  "bulletPoint": "Historial de Pago:",
+                  "infoBulletPoint": "de la suscripción de Lofty. "
+                },
+                {
+                  "bulletPoint": "Despliegue:",
+                  "infoBulletPoint": "para lanzar el proyecto. "
+                }
+              ]
+            },
+            {
+              "imagedata": "project_dashboard_init_demo",
+              "descriptionImage": "Dashboard de un Proyecto Demo"
+            },
+            {
+              "textinfo": "En la vista principal del Dashboard, podemos observar una bitácora con las actividades recientes del proyecto. Toda actividad como creación de colección, edición de campos, y entre otros será listado aquí, donde se indica el tipo de actividad, en donde se realizo, y la fecha con la hora."
+            },
+            {
+              "imagedata": "project_dashboard_init_log",
+              "descriptionImage": "Seccion de Bitacora del Proyecto"
+            },
+            {
+              "textinfo": "También en la misma vista se encuentra una sección de los datos de prueba. Esta información contiene todos los datos simulados guardados dentro de las colecciones de datos, y despliega la cantidad de información por colección."
+            },
+            {
+              "imagedata": "project_dashboard_init_db_graph",
+              "descriptionImage": "Gráfico de Datos de Las Colecciones de Datos"
+            },
+            {
+              "textinfo": "También dentro de la misma vista se encuentra una sección de información como cantidad de usuarios de prueba, colecciones de datos creadas, paginas creadas, entre otra información."
+            },
+            {
+              "imagedata": "project_dashboard_init_project_info_graph",
+              "descriptionImage": "Gráfico de información de Proyecto"
+            },
+            {
+              "textinfo": "Se ofrece también la opción de “Desplegar” el proyecto en esta misma vista en caso de querer lanzar el proyecto a estado de producción."
+            },
+            {
+              "imagedata": "project_dashboard_init_deploy_project",
+              "descriptionImage": "Opción de Despliegue de Proyecto"
+            }
+          ]
+        },
+        {
+          "title": "Sección de Colección De Datos",
+          "id": "project_database_dashboard",
+          "content": [
+            {
+              "textinfo": "En la opción de “Colección de Datos” se mostrará la vista de todas las colecciones de datos. De esta vista se puede visualizar y crear colecciones de datos."
+            },
+            {
+              "imagedata": "project_database_init",
+              "descriptionImage": "Colecciones de Datos del Proyecto"
+            },
+            {
+              "textinfo": "Para crear una colección de datos, se requiere la información principal: Etiqueta o el nombre de la colección, Slug o un identificador único para la colección y una descripción. Si se desea almacenar archivos como imágenes o videos, se debe habilitar “Almacenador de Archivos”."
+            },
+            {
+              "imagedata": "project_database_modal_create",
+              "descriptionImage": "Modal Creacion de Coleccion de Datos"
+            },
+            {
+              "textinfo": "Al entrar en una de las colecciones de datos, se presentará una vista de Dashboard de Colección de Datos. La vista principal es la de los campos, donde se muestran los campos principales para almacenar y manejar la información de dicha colección de Datos."
+            },
+            {
+              "imagedata": "project_database_main_dashboard",
+              "descriptionImage": "Dashboard de Colección de Datos"
+            },
+            {
+              "textinfo": "El menú lateral posee las opciones de navegación de la colección de datos:"
+            },
+            {
+              "listData": [
+                {
+                  "bulletPoint": "Campos:",
+                  "infoBulletPoint": "Los campos para manejar la información de cada colección, en esta vista se puede crear, editar, visualizar y eliminar los campos."
+                },
+                {
+                  "bulletPoint": "Servicios:",
+                  "infoBulletPoint": "estos son todos los servicios para manejar la colección de datos como Servicio de Listar, Servicio de Crear, y Servicios personalizados."
+                },
+                {
+                  "bulletPoint": "Documentación:",
+                  "infoBulletPoint": "la sección donde se visualiza la documentación de la funcionalidad de cada servicio agregado."
+                },
+                {
+                  "bulletPoint": "Datos:",
+                  "infoBulletPoint": "Es la sección donde se muestran los datos guardados dentro del proyecto. Estos datos son simulados o creados a partir del proyecto antes de su despliegue."
+                },
+                {
+                  "bulletPoint": "Actividad:",
+                  "infoBulletPoint": "Bitacora donde se registra cualquier actividad de la colección de datos."
+                },
+                {
+                  "bulletPoint": "Configuraciones:",
+                  "infoBulletPoint": "Lugar que permite actualizar la etiqueta de la colección o incluso eliminarla de ser requerido."
+                }
+              ]
+            },
+            {
+              "imagedata": "project_database_dashboard_navbar",
+              "descriptionImage": "Menu Lateral de Dashboard de Colección de Datos"
+            },
+            {
+              "textinfo": "La sección de Campos de la colección de datos muestra una tabla con todos los campos creados dentro de la colección."
+            },
+            {
+              "imagedata": "project_database_dashboard_fields",
+              "descriptionImage": "Tabla de Campos de la Colección de Datos"
+            },
+            {
+              "textinfo": "Para agregar un campo a la colección de datos, se debe de hacer click en el botón de “+Agregar”, donde los campos de un campo son: Etiqueta o nombre, slug o identificador único, una descripción, el tipo de campo, opción de indexar el campo, opción de que los datos del campo sean únicos, opción de que el campo sea requerido al momento de ingresar información, opción de que el campo sea de etiqueta en la colección de datos."
+            },
+            {
+              "imagedata": "project_database_dashboard_modal_addfield",
+              "descriptionImage": "Dialogo Para Agregar Campo"
+            },
+            {
+              "textinfo": "Los tipos de campo son enlistados al momento de seleccionar el tipo:"
+            },
+            {
+              "listData": [
+                {
+                  "bulletPoint": "Cadena de Texto:",
+                  "infoBulletPoint": "Entrada de texto. Este tipo trae varios formatos para el ingreso de datos."
+                },
+                {
+                  "bulletPoint": "Numero:",
+                  "infoBulletPoint": "Entrada de tipo numérico. Este campo solo acepta formatos numéricos."
+                },
+                {
+                  "bulletPoint": "Boolean:",
+                  "infoBulletPoint": "Entrada de tipo verdadero o falso. Es un campo que solo ofrece la opción de verdadero o falso."
+                },
+                {
+                  "bulletPoint": "Fecha:",
+                  "infoBulletPoint": "Entrada de tipo Fecha."
+                },
+                {
+                  "bulletPoint": "Relación de Base de Datos:",
+                  "infoBulletPoint": "ttipo de entrada de relación. Este campo permite que la colección de datos tenga una relación con otra colección de datos."
+                },
+                {
+                  "bulletPoint": "Usuario:",
+                  "infoBulletPoint": "entrada de tipo usuario. Es un campo que conecta los usuarios creados dentro del proyecto con la colección de datos."
+                },
+                {
+                  "bulletPoint": "Hora:",
+                  "infoBulletPoint": "entrada de tipo hora."
+                },
+                {
+                  "bulletPoint": "Latitud & Longitud:",
+                  "infoBulletPoint": "Entrada para coordenadas."
+                },
+                {
+                  "bulletPoint": "Texto Enriquecido:",
+                  "infoBulletPoint": "formato especial para entradas de texto para visualizar blogs o secciones de texto personalizadas."
+                }
+              ]
+            },
+            {
+              "imagedata": "project_database_dashboard_type_fields",
+              "descriptionImage": "Tipos de Campo"
+            },
+            {
+              "textinfo": "Al seleccionar que el tipo de campo sea “Cadena de Texto”, se despliega otra opción para definir que tipo de texto soportara el campo."
+            },
+            {
+              "listData": [
+                {
+                  "bulletPoint": "Básica:",
+                  "infoBulletPoint": "Cadena de texto estándar. Soporta cualquier tipo de entrada de texto."
+                },
+                {
+                  "bulletPoint": "Correo:",
+                  "infoBulletPoint": "Su principal uso es para entradas de texto con formato de correo."
+                },
+                {
+                  "bulletPoint": "Selección:",
+                  "infoBulletPoint": "el campo será un menú con despliegue de las opciones de cadena establecidas."
+                },
+                {
+                  "bulletPoint": "Teléfono:",
+                  "infoBulletPoint": "Entrada para números telefónicos."
+                },
+                {
+                  "bulletPoint": "Link/Dirección Web:",
+                  "infoBulletPoint": "su principal uso es para entradas que sean URLs o direcciones web."
+                }
+              ]
+            },
+            {
+              "imagedata": "project_database_dashboard_select_type_string",
+              "descriptionImage": "Tipos de Cadena de Texto"
+            },
+            {
+              "textinfo": "En la selección de “Tipo de campo” que sea Relación de Base de Datos, se desplegará la opción para seleccionar la colección de datos con la que se hará la relación. Aquí se desplegará toda colección de datos creada dentro del proyecto. Luego habra que seleccionar el servicio de consulta de esa colección."
+            },
+            {
+              "imagedata": "project_database_dashboard_select_relation_database",
+              "descriptionImage": "Opciones de selección de relación de base de datos"
+            },
+            {
+              "textinfo": "Cada campo se listará dentro de la tabla de campos, donde existen 2 opciones en las acciones. Editar y eliminar."
+            },
+            {
+              "imagedata": "project_database_dashboard_actions_fields",
+              "descriptionImage": "Acciones de un Campo"
+            },
+            {
+              "textinfo": "En la opción de editar, se desplegará un dialogo para editar la información del campo, similar al dialogo de crear campo."
+            },
+            {
+              "imagedata": "project_database_dashboard_modal_updatefield",
+              "descriptionImage": "Dialogo para Editar Campo"
+            },
+            {
+              "textinfo": "En la sección de Servicios se despliegan todos los servicios agregados para la interacción entre la aplicación/proyecto & la colección de datos. Entre los servicios principales se encuentran los siguientes:"
+            },
+            {
+              "listData":[
+                {
+                  "bulletPoint": "Creación:",
+                  "infoBulletPoint": "permite la entrada de datos a la colección por medio de una petición de creación."
+                },
+                {
+                  "bulletPoint": "Actualizar:",
+                  "infoBulletPoint": "actualizar la información de un dato especifico de la colección de datos. Requiere el identificador para actualizar el dato."
+                },
+                {
+                  "bulletPoint": "Obtener:",
+                  "infoBulletPoint": "permite mostrar un dato especifico de la colección. Es necesario enviar el identificador a la petición para que muestre dicho dato."
+                },
+                {
+                  "bulletPoint": "Obtener todo:",
+                  "infoBulletPoint": "permite listar todos los datos creados dentro de la colección especifica."
+                },
+                {
+                  "bulletPoint": "Eliminar:",
+                  "infoBulletPoint": "elimina un dato de la colección de datos. Requiere el identificador para eliminar el dato especificado."
+                },
+                {
+                  "bulletPoint": "Personalizado:",
+                  "infoBulletPoint": "este es un tipo de servicio donde se personaliza la petición que se desea crear."
+                }
+              ]
+            },
+            {
+              "imagedata": "project_database_dashboard_endpoints",
+              "descriptionImage": "Sección de Servicios de una Colección de Datos"
+            },
+            {
+              "textinfo": "En la sección de documentación se encuentra toda documentación de los servicios de la colección de datos. La documentación incluye información como el tipo de servicio, dirección a la que se dirige la petición, e información sobre el cuerpo de la petición."
+            },
+            {
+              "imagedata": "project_database_dashboard_documentation_endpoint",
+              "descriptionImage": "Sección de documentación de una Colección de Datos"
+            },
+            {
+              "textinfo": "La sección de Datos se encuentran todos los datos guardados dentro de la colección de datos. Estos datos se listan dentro de una tabla. Las opciones dentro de esta sección es Agregar datos, exportar los datos a una tabla de formato CSV, actualizar la tabla en caso de que existan nuevos datos, y búsqueda."
+            },
+            {
+              "imagedata": "project_database_dashboard_data_table",
+              "descriptionImage": "Sección de Datos de una Colección de Datos"
+            },
+            {
+              "textinfo": "Al agregar un dato, se muestra una vista donde se listan todos los campos de la colección de datos para agregar un nuevo dato."
+            },
+            {
+              "imagedata": "project_database_dashboard_dialog_adddata_sample",
+              "descriptionImage": "Vista de ejemplo Agregar Dato"
+            },
+            {
+              "textinfo": "Al igual que en la tabla anterior, en los datos aparece la columna de acciones. Las opciones son Editar y Eliminar. Al editar, se muestra una vista igual que Agregar Dato con la diferencia que esta vista tendrá información sobre el dato a editar."
+            },
+            {
+              "imagedata": "project_database_dashboard_data_actions_sample",
+              "descriptionImage": "Ejemplo de Dato con columna de “Acciones”"
+            },
+            {
+              "textinfo": "En caso de querer mostrar solo ciertos datos por medio de filtrado, está el botón de filtros. "
+            },
+            {
+              "imagedata": "project_database_dashboard_data_filter_button",
+              "descriptionImage": "Botón de Filtros"
+            },
+            {
+              "textinfo": "Al hacer click en el botón, se desplegará una sección con todos los campos de la colección de datos para realizar el filtrado deseado. Los campos de “Texto”, “Usuarios”, y “Relación de Base de Datos” permiten múltiples valores para el filtrado. Los otros tipos de campos solo permiten un valor. El campo de “texto enriquecido” no permite filtrado."
+            },
+            {
+              "textinfo": "Al darle click en “Filtrar”, los datos serán filtrados y se mostrara solo aquellos datos que cumplan con los filtros. Al darle click en “Resetear”, los filtros se limpian y se recuperan todos los datos sin filtrado."
+            },
+            {
+              "imagedata": "project_database_dashboard_data_modal_filter",
+              "descriptionImage": "Sección de Filtros"
+            }
+          ]
+        },
+        {
+          "title": "Sección de Paginas del Proyecto",
+          "id": "project_pages_dashboard",
+          "content": [
+            {
+              "textinfo": "Al entrar a la sección de “Paginas” del proyecto, se despliega una tabla que contiene todas las paginas creadas dentro del proyecto, un botón para agregar, y un botón de simulador. El botón de simulador hace redireccionamiento a la página principal del proyecto."
+            },
+            {
+              "imagedata": "project_pages_main_dashboard_table",
+              "descriptionImage": "Vista de Paginas del Proyecto"
+            },
+            {
+              "imagedata": "project_pages_main_type_addpage",
+              "descriptionImage": "Tipos de página"
+            },
+            {
+              "textinfo": "Al hacer click en agregar página, se despliega un diálogo para crear una nueva página. Los campos principales son Tipo (Personalizada, Principal o Error 404) Etiqueta (o nombre para la página), slug o un identificador único, URL, y descripción. Si el proyecto tiene un sistema de usuarios, el campo de “Autenticación de Usuario” se mostrará en el diálogo. La opción de “Error 404?” es para crear una página en la que se hará redireccionamiento cuando la URL no se encuentre dentro del proyecto (nota: solo puede existir 1 página 404). Adicionalmente aparece una sección a la derecha del diálogo que permite pre-configurar una estructura de página según las necesidades."
+            },
+            {
+              "imagedata": "project_pages_main_modal_addpage",
+              "descriptionImage": "Dialogo de Agregar Pagina"
+            },
+            {
+              "textinfo": "Al momento de crear una URL, existen 2 opciones. Parametro o Ruta."
+            },
+            {
+              "imagedata": "project_pages_main_select_url",
+              "descriptionImage": "Opciones de URL"
+            },
+            {
+              "textinfo": "En caso de ser por parámetro, la sección de esa ruta contendrá un [ : ] antes de agregar el texto de la ruta. Esta fracción de URL tendrá un valor dinámico proporcionado durante la navegación de la aplicación, por lo que se puede utilizar para realizar alguna petición a una colección de datos o realizar una verificación con respecto a la página creada. "
+            },
+            {
+              "imagedata": "project_pages_main_input_url_param",
+              "descriptionImage": "Fragmento de URL con Parámetro"
+            },
+            {
+              "textinfo": "En caso de ser solo una ruta, solo se debe proporcionar el texto de la ruta."
+            },
+            {
+              "imagedata": "project_pages_main_input_url_route",
+              "descriptionImage": "Fragmento de URL con Ruta"
+            },
+            {
+              "textinfo": "Una vez creada la página, se mostrará en tabla la pagina creada con varios elementos por página. Los elementos son:"
+            },
+            {
+              "listData": [
+                {
+                  "bulletPoint": "Preview:",
+                  "infoBulletPoint": "una vista previa de la página."
+                },
+                {
+                  "bulletPoint": "Nombre:",
+                  "infoBulletPoint": "el nombre que se designó a la página."
+                },
+                {
+                  "bulletPoint": "URL:",
+                  "infoBulletPoint": "la dirección de la página. Si la URL es solo [ / ], esta será la dirección principal de la página, o la página principal del proyecto."
+                },
+                {
+                  "bulletPoint": "Acciones:",
+                  "infoBulletPoint": "las acciones para manejar la página."
+                }
+              ]
+            },
+            {
+              "imagedata": "project_pages_main_table_page_row",
+              "descriptionImage": "Ejemplo de una pagina dentro de la tabla de Paginas"
+            },
+            {
+              "textinfo": "Dentro de las opciones para manejar la pagina se encuentran las siguientes:"
+            },
+            {
+              "listData":[
+                {
+                  "bulletPoint": "Editor Lofty Apps:",
+                  "infoBulletPoint": "al hacer click, este llevara al Editor de Lofty Apps, donde se personaliza la página correspondiente."
+                }
+              ]
+            },
+            {
+              "imagedata": "project_pages_main_table_page_editor_selection",
+              "descriptionImage": "Opción de Editor Lofty Apps"
+            },
+            {
+              "listData":[
+                {
+                  "bulletPoint": "Clonar:",
+                  "infoBulletPoint": "Al clonar la página, se hará una copia de la pagina y se ingresaran los nuevos datos de dicha pagina con un dialogo parecido al de crear página."
+                }
+              ]
+            },
+            {
+              "imagedata": "project_pages_main_table_page_clone_selection",
+              "descriptionImage": "Opción de Clonar Pagina"
+            },
+            {
+              "imagedata": "project_pages_main_table_page_clone_modal",
+              "descriptionImage": "Dialogo de Clonar Pagina"
+            },
+            {
+              "listData":[
+                {
+                  "bulletPoint": "Editar información:",
+                  "infoBulletPoint": "se edita la información de la pagina como su URL, descripción, nombre."
+                }
+              ]
+            },
+            {
+              "imagedata": "project_pages_main_table_page_edit_selection",
+              "descriptionImage": "Opción de Editar información"
+            },
+            {
+              "imagedata": "project_pages_main_table_page_edit_modal",
+              "descriptionImage": "Dialogo de Editar Pagina"
+            },
+            {
+              "listData":[
+                {
+                  "bulletPoint": "Eliminar:",
+                  "infoBulletPoint": "Se elimina la página designada."
+                }
+              ]
+            },
+            {
+              "imagedata": "project_pages_main_table_page_delete_selection",
+              "descriptionImage": "Opción de Eliminar Página"
+            }
+          ]
+        },
+        {
+          "title": "Sección de Usuarios de Proyecto",
+          "id": "project_user_auth_dashboard",
+          "content":[
+            {
+              "textinfo": "La sección de Usuarios solo se encuentra disponible si el proyecto tiene habilitado “Sistema de Usuarios.”"
+            },
+            {
+              "textinfo": "La sección de Usuarios contiene los métodos de autenticación de los usuarios. Los métodos para agregar son “Correo y Contraseña”, “Google”, y “Facebook”."
+            },
+            {
+              "imagedata": "project_userauth_main_dashboard",
+              "descriptionImage": "Sección de Usuarios"
+            },
+            {
+              "textinfo": "Al ingresar a “Correo y Contraseña”, se despliega la vista principal que son los campos que posee este método de autenticación. Al igual que los campos de “Colección de Datos”, aquí se agregan los campos a utilizar el manejo de información de la autenticación de “Correo y Contraseña”."
+            },
+            {
+              "imagedata": "project_userauth_main_fields_table",
+              "descriptionImage": "Tabla de Campos de Usuarios"
+            },
+            {
+              "textinfo": "En el caso de agregar un campo, se muestra un dialogo parecido al de “Agregar Campo” de Colección de Datos."
+            },
+            {
+              "imagedata": "project_userauth_modal_addfield",
+              "descriptionImage": "Dialogo de Agregar Campo para Usuario"
+            },
+            {
+              "textinfo": "La sección de roles permite agregar Roles a los usuarios."
+            },
+            {
+              "imagedata": "project_userauth_roles_table",
+              "descriptionImage": "Tabla de Roles de Usuarios"
+            },
+            {
+              "imagedata": "project_userauth_roles_add",
+              "descriptionImage": "Dialogo de Agregar Roles de Usuarios"
+            },
+            {
+              "textinfo": "La sección de Documentación se encuentra toda la documentación con respecto a la autenticación de “Correo y Contraseña”, como Crear Usuario, Ingresar, entre otra información. "
+            },
+            {
+              "imagedata": "project_userauth_documentation_section",
+              "descriptionImage": "Documentación de Usuarios (Correo y Contraseña)"
+            },
+            {
+              "textinfo": "Los Datos de Usuarios contiene todos los usuarios creados dentro del proyecto por medio del método de autenticación."
+            },
+            {
+              "imagedata": "project_userauth_data_table_sample",
+              "descriptionImage": "Tabla de Datos de Usuarios (Correo y Contraseña)"
+            },
+            {
+              "textinfo": "En la sección de configuraciones, se desplegará la configuración dependiendo del tipo de autenticación a la que se este realizando la configuración. En el caso de Google y Facebook, se solicitará ciertas credenciales para habilitar la autenticación de usuarios."
+            },
+            {
+              "imagedata": "project_userauth_settings_section",
+              "descriptionImage": "Configuración de Usuarios (Correo y Contraseña)" 
+            },
+            {
+              "imagedata": "project_userauth_google_settings_section",
+              "descriptionImage": "Configuración de Usuarios (Google)" 
+            },
+            {
+              "imagedata": "project_userauth_facebook_settings_section",
+              "descriptionImage": "Configuración de Usuarios (Facebook)" 
+            },
+            {
+              "textinfo": "La sección de actividades muestra toda la bitácora con respecto a las configuraciones de Usuarios."
+            }
+
+          ]
+        },
+        {
+          "title": "Equipo",
+          "id": "project_team_management_dashboard",
+          "content":[
+            {
+              "textinfo": "En la sección de equipo, se maneja a todos los colaboradores del proyecto a los que se ha enviado una solicitud."
+            },
+            {
+              "imagedata": "project_team_management_main_dashboard",
+              "descriptionImage": "Sección de Equipo"
+            },
+            {
+              "textinfo": "Al agregar un colaborador, se despliega un dialogo donde se busca el colaborador por medio del nombre, y se le asigna un rol. Al buscar el nombre del nuevo colaborador, se listarán los usuarios disponibles dentro de Lofty Apps para que sean colaboradores dentro del proyecto."
+            },
+            {
+              "imagedata": "project_team_management_modal_addcollaborator",
+              "descriptionImage": "Dialogo de Agregar Colaborador"
+            }
+          ]
+        },
+        {
+          "title": "Sección de Plugins",
+          "id": "project_plugin_dashboard",
+          "content": [
+            {
+              "textinfo": "La sección de Plugins contiene funciones extras que se utilizan dentro del proyecto. Cada función trae su documentación y configuración para gestionar el plugin indicado."
+            },
+            {
+              "imagedata": "project_plugin_main_dashboard",
+              "descriptionImage": "Sección de Plugins de Proyecto"
+            }
+          ]
+        },
+        {
+          "title": "Sección de Método de pago",
+          "id": "project_payment_methods_dashboard",
+          "content":[
+            {
+              "textinfo": "Desde donde se puede configurar los métodos de pago de tu página, desde la cuenta y como se recibe el dinero, como se guarda la información de los pagos hasta que tipo de pagos se quieren recibir (Link de pago, Servicio o Carrito)."
+            },
+            {
+              "textinfo": "Está dividida en tres pestañas:"
+            },
+            {
+              "listData": [
+                {
+                  "bulletPoint": "Solicitar Pasarela de pago:",
+                  "infoBulletPoint": "con la información básica requerida para la pasarela."
+                }
+              ]
+            },
+            {
+              "imagedata": "project_payment_methods_first_tab",
+              "descriptionImage": "Pestaña Solicitar Pasarela de pago"
+            },
+            {
+              "listData": [
+                {
+                  "bulletPoint": "Método de pago:",
+                  "infoBulletPoint": "con la lista de los métodos de pago configurados."
+                }
+              ]
+            },
+            {
+              "imagedata": "project_payment_methods_second_tab",
+              "descriptionImage": "Pestaña Método de pago"
+            },
+            {
+              "textinfo": "En el caso de agregar un método de pago, se muestra un diálogo como el siguiente."
+            },
+            {
+              "imagedata": "project_payment_methods_second_tab_dialog",
+              "descriptionImage": "Diálogo de Agregar Método de pago"
+            },
+            {
+              "listData": [
+                {
+                  "bulletPoint": "Servicios para obtener un dato:",
+                  "infoBulletPoint": "Esto en caso de querer relacionar el pago con alguna relación de las colecciones de datos para obtener algún dato y muestra la lista de esta configuración."
+                }
+              ]
+            },
+            {
+              "imagedata": "project_payment_methods_third_tab",
+              "descriptionImage": "Pestaña Servicios para obtener datos"
+            },
+            {
+              "textinfo": "En el caso de agregar un servicio, se muestra un diálogo como el siguiente:"
+            },
+            {
+              "imagedata": "project_payment_methods_third_tab_dialog",
+              "descriptionImage": "Diálogo de Agregar Servicio"
+            }
+          ]
+        },
+        {
+          "title": "Sección Cron Jobs",
+          "id": "project_cronjobs_dashboard",
+          "content":[
+            {
+              "textinfo": "Es la sección donde se pueden configurar tareas programadas que se ejecutan automáticamente en intervalos regulares de tiempo."
+            },
+            {
+              "imagedata": "project_cronjobs_main_table",
+              "descriptionImage": "Tabla Cron Jobs"
+            },
+            {
+              "textinfo": "En el caso de agregar un Cron Job, se va a la sección de agregar donde se puede configurar con los distintos bloques programáticos para configurar la tarea, un nombre, un identificador (slug) y el tiempo entre ejecuciones del mismo."
+            },
+            {
+              "imagedata": "project_cronjobs_add",
+              "descriptionImage": "Sección Agregar Cron Job"
+            }
+          ]
+        },
+        {
+          "title": "Sección de API Key",
+          "id": "project_apikey_dashboard",
+          "content":[
+            {
+              "textinfo": "La sección de API key permite la integración de APIs externas para que el proyecto pueda utilizar los servicios establecidos."
+            },
+            {
+              "imagedata": "project_apikey_main_table",
+              "descriptionImage": "Tabla de API Keys"
+            }
+          ]
+        },
+        {
+          "title": "Sección de Multimedia",
+          "id": "project_multimedia_dashboard",
+          "content":[
+            {
+              "textinfo": "La sección de Multimedia contiene todos los archivos de tipo multimedia (como imágenes) guardados dentro del proyecto o los que se han utilizado dentro del Editor. En esta sección se pueden subir los archivos directamente, o eliminar los archivos."
+            },
+            {
+              "imagedata": "project_multimedia_main_section",
+              "descriptionImage": "Sección de Multimedia"
+            }
+          ]
+        },
+        {
+          "title": "Sección de Actividades",
+          "id": "project_main_log_dashboard",
+          "content": [
+            {
+              "textinfo": "La sección de Actividades muestra la bitácora con respecto las actividades que se han realizado dentro del proyecto, el tipo de actividad, la fecha, hora, y una descripción sobre la actividad realizada."
+            },
+            {
+              "imagedata": "project_main_log_info_section",
+              "descriptionImage": "Sección de Actividades del Proyecto"
+            }
+          ]
+        },
+        {
+          "title": "Sección de Configuraciones",
+          "id": "project_configurations_dashboard",
+          "content": [
+            {
+              "textinfo": "La sección de Configuraciones del proyecto muestra las configuraciones esenciales del proyecto, también se permite Exportar el proyecto, Eliminarlo o Copiarlo. Dentro de las configuraciones se encuentran las siguientes:"
+            },
+            {
+              "listData": [
+                {
+                  "bulletPoint": "Credenciales de Correo:",
+                  "infoBulletPoint": "los correos que se utilizan para credenciales del proyecto."
+                },
+                {
+                  "bulletPoint": "Palabras Clave:",
+                  "infoBulletPoint": "son las palabras que utiliza el proyecto para las búsquedas en línea. (Ref: SEO)."
+                },
+                {
+                  "bulletPoint": "Imagen del Proyecto:",
+                  "infoBulletPoint": "se puede subir una imagen representativa para el proyecto."
+                },
+                {
+                  "bulletPoint": "Editar Datos del Proyecto:",
+                  "infoBulletPoint": "muestra los campos para editar la información del proyecto como el nombre y descripción."
+                },
+                {
+                  "bulletPoint": "Slug:",
+                  "infoBulletPoint": "muestra el slug o identificador único del proyecto. El slug solo es de lectura, no se edita."
+                }
+              ]
+            },
+            {
+              "imagedata": "project_configurations_main_section",
+              "descriptionImage": "Sección de Configuraciones del Proyecto"
+            }
+          ]
+        },
+        {
+          "title": "Sección de Despliegue",
+          "id": "project_deploy_dashboard",
+          "content": [
+            {
+              "textinfo": "La sección de despliegue lleva a cabo los pasos para lanzar a producción el proyecto. La primera sección despliega los planes disponibles para el lanzamiento del proyecto. Cada plan tiene sus respectivos beneficios, y costos en Lempiras."
+            },
+            {
+              "imagedata": "project_deployment_main_plans_section",
+              "descriptionImage": "Sección de Planes de Despliegue Lofty Apps"
+            },
+            {
+              "textinfo": "Una vez se selecciona el plan, se procede a hacer la publicación y el pago. Se dará un resumen breve sobre el proyecto a publicar."
+            },
+            {
+              "imagedata": "project_deployment_payment_checkout_section",
+              "descriptionImage": "Resumen de Despliegue de un Proyecto"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
