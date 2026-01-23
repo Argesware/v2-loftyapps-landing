@@ -4,6 +4,9 @@ import Link from "next/link"
 import { useState } from "react"
 import { Search, Home, BookOpen, Code2, Layers, Zap, Globe, Shield, ChevronRight } from "lucide-react"
 import CurrencySelector from "@/components/currency-selector"
+import editorDocumentation from '@/lib/editorDocumentation.json';
+import platformDocumentation from '@/lib/platformDocumentation.json';
+import RenderDocumentation from "@/components/renderDocumentation"
 
 const sections = [
   {
@@ -45,8 +48,33 @@ const sections = [
     },
   },
   {
+    id: "platformlofty",
+    title: "Plataforma",
+    content: {
+      title: "Plataforma de Lofty Apps",
+      description: "Explora la plataforma de Lofty Apps.",
+      subsections: [
+        {
+          subtitle: "Componentes básicos",
+          text: "Texto: Párrafos, títulos y texto enriquecido.\nBotones: Botones con diferentes estilos y acciones.\nImágenes: Carga y muestra imágenes con opciones de ajuste.\nContenedores: Agrupa elementos con layouts flex o grid.\nFormas: Rectángulos, círculos y formas personalizadas.",
+        },
+        {
+          subtitle: "Componentes de formulario",
+          text: "Input de texto, área de texto, casillas de verificación, botones de radio, selectores desplegables, selector de fecha, carga de archivos, botón de envío. Todos los componentes de formulario incluyen validación integrada y manejo de errores.",
+        },
+        {
+          subtitle: "Componentes de datos",
+          text: "Tablas de datos con paginación y ordenamiento, listas dinámicas con repetidores, gráficos y visualizaciones, tarjetas de información, badges y etiquetas. Conecta estos componentes directamente a tu base de datos para mostrar información en tiempo real.",
+        },
+      ],
+    },
+    icon: Layers,
+    sections: platformDocumentation,
+    origin: 'platform',
+  },
+  {
     id: "componentes",
-    title: "Componentes",
+    title: "Editor",
     icon: Layers,
     content: {
       title: "Biblioteca de Componentes",
@@ -66,6 +94,8 @@ const sections = [
         },
       ],
     },
+    sections: editorDocumentation,
+    origin: 'editor',
   },
   {
     id: "bases-datos",
@@ -165,7 +195,6 @@ export default function DocumentacionPage() {
   const [activeSection, setActiveSection] = useState("inicio")
   const [searchQuery, setSearchQuery] = useState("")
   const [sidebarOpen, setSidebarOpen] = useState(true)
-
   const currentSection = sections.find((s) => s.id === activeSection)
 
   const filteredSections = sections.filter(
@@ -240,7 +269,10 @@ export default function DocumentacionPage() {
                 </div>
 
                 {/* Content Sections */}
-                <div className="space-y-8">
+                {currentSection?.sections ? (
+                  <RenderDocumentation key={currentSection.id} jsonInfo={currentSection.sections} origin={currentSection.origin} />
+                ) : (
+                  <div className="space-y-8">
                   {currentSection.content.subsections.map((subsection, index) => (
                     <div key={index} className="neu-flat p-8 rounded-2xl space-y-4">
                       <h2 className="text-2xl font-bold text-[#1a202c]">{subsection.subtitle}</h2>
@@ -254,6 +286,8 @@ export default function DocumentacionPage() {
                     </div>
                   ))}
                 </div>
+                )}
+                
 
                 {/* Navigation Footer */}
                 <div className="flex justify-between items-center pt-8 border-t border-gray-300/50">

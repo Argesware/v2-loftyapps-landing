@@ -1,0 +1,1362 @@
+{
+  "sections": [
+    {
+      "title": "Menu Lateral",
+      "id": "main_editor",
+      "subsections": [
+        {
+          "title": "Sección de Componentes",
+          "id": "editor_components",
+          "content": [
+            {
+              "textinfo": "Contiene todos los componentes que se utilizan para la edición de la página."
+            },
+            {
+              "imagedata": "editor_components_menu",
+              "descriptionImage": "Vista de Menu de Componentes"
+            }
+          ]
+        },
+        {
+          "title": "Sección de Árbol del Canvas",
+          "id": "editor_tree",
+          "content": [
+            {
+              "textinfo": "El árbol del Canvas contiene toda la estructura y posiciones de los componentes ingresados dentro del canvas. El “Cuerpo” seria la sección principal de la página, y la que contendrá todos los elementos ingresados al canvas. Se puede seleccionar los elementos dentro del canvas y desplazar sus posiciones."
+            },
+            {
+              "imagedata": "editor_canvas_tree",
+              "descriptionImage": "Arbol del Editor"
+            }
+          ]
+        },
+        {
+          "title": "Sección de Estilos",
+          "id": "editor_stylesection",
+          "content": [
+            {
+              "textinfo": "La sección de estilos contiene varias secciones para la personalización de los componentes."
+            },
+            {
+              "imagedata": "editor_stylesection_menu",
+              "descriptionImage": "Menu de Estilos"
+            }
+          ]
+        },
+        {
+          "title": "Sección de Configuraciones",
+          "id": "editor_settings_config",
+          "content": [
+            {
+              "textinfo": "La sección de Configuraciones permite modificar funciones y atributos de un componente. Una configuración básica es la de “Identificador” la que permite que un componente tenga un valor único (se genera automático al guardar la página). Otros componentes tienen otras configuraciones más específicas (ver configuraciones avanzadas)."
+            },
+            {
+              "imagedata": "editor_settings_config",
+              "descriptionImage": "Configuración de Componente"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Menu de Navegación",
+      "id": "navigation_menu_editor",
+      "subsections":[
+        {
+          "title": "Formato de Dispositivo",
+          "id": "device_format",
+          "content": [
+            {
+              "imagedata": "device_format",
+              "descriptionImage": "Formatos de Dispositivo"
+            },
+            {
+              "textinfo": "A partir de la selección del dispositivo, la pantalla se adaptará a dicho dispositivo. Entre ellos están los formatos de “Escritorio”, “Tablet”, y “Móvil” respectivamente. Cada estilo se guarda respectivamente según el formato en el que se esté trabajando."
+            }
+          ]
+        },
+        {
+          "title": "Acciones",
+          "id": "editor_actions",
+          "content": [
+            {
+              "imagedata": "editor_actions",
+              "descriptionImage": "Acciones del Editor"
+            },
+            {
+              "textinfo": "Son las acciones que se ejecutan dentro de la pagina en la que se trabaja. Dentro de las acciones básicas se encuentran:"
+            },
+            {
+              "listData": [
+                {
+                  "bulletPoint": "Limpiar:",
+                  "infoBulletPoint": "elimina todos los elementos del canvas y deja la página vacía."
+                },
+                {
+                  "bulletPoint": "Deshacer cambio: ",
+                  "infoBulletPoint": "deshace el ultimo cambio realizado en el canvas."
+                },
+                {
+                  "bulletPoint": "Rehacer cambio: ",
+                  "infoBulletPoint": "reanuda el ultimo cambio eliminado, o restaura cualquier cambio deshecho."
+                },
+                {
+                  "bulletPoint": "Vista preliminar:",
+                  "infoBulletPoint": "permite ver la pagina desde una vista preliminar según el formato de dispositivo en el que se esté trabajando."
+                }
+              ]
+            },
+            {
+              "textinfo": "Luego se encuentran las acciones avanzadas:"
+            },
+            {
+              "listData": [
+                {
+                  "bulletPoint": "Variables:",
+                  "infoBulletPoint": "son las variables con las que trabaja la página, como valores de estado o contadores."
+                },
+                {
+                  "bulletPoint": "Lógica de Elemento: ",
+                  "infoBulletPoint": ": permite agregar funciones y lógica a la página."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Limites de Elementos",
+          "id": "delimiter_format_editor",
+          "content": [
+            {
+              "imagedata": "delimiter_format_editor",
+              "descriptionImage": "Limites de Elementos"
+            },
+            {
+              "textinfo": "Permite ver el limite de cada componente con líneas punteadas."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Canvas",
+      "id": "editor_canvas",
+      "subsections": [
+        {
+          "title": "El Canvas",
+          "id": "editor_canvas_section",
+          "content": [
+            {
+              "imagedata": "editor_canvas_section",
+              "descriptionImage": "Canvas"
+            },
+            {
+              "textinfo": "El Canvas es donde se encuentran todos los elementos que se arrastran para la creación, y personalización dentro de la página."
+            },
+            {
+              "textinfo": "Dentro del canvas se encontrará algunas configuraciones como desplazamiento entre los objetos, copiar/clonar elemento y eliminar."
+            },
+            {
+              "imagedata": "component_tools_nav",
+              "descriptionImage": "Configuraciones de manejo de componente en canvas"
+            },
+            {
+              "textinfo": "En los textos tendrán configuraciones para editar algunos estilos del texto de forma directa."
+            },
+            {
+              "imagedata": "text_tools_nav",
+              "descriptionImage": "Configuraciones de manejo de Texto en canvas"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Componentes",
+      "id": "editor_plugin_components",
+      "subsections":[
+        {
+          "title": "Basicos",
+          "id": "basic_components",
+          "content": [
+            {
+              "textinfo": "Los componentes básicos son los que se utilizan para mostrar la información de la página y cómo distribuirla en la pantalla."
+            },
+            {
+              "imagedata": "basic_components_table",
+              "descriptionImage": "Componentes Basicos"
+            },
+            {
+              "titlesubsection": "Bloque:"
+            },
+            {
+              "textinfo": "El componente de bloque es el componente básico para la división de sectores dentro del Canvas."
+            },
+            {
+              "imagedata": "block_component_icon",
+              "descriptionImage": "Componente de Bloque"
+            },
+            {
+              "titlesubsection": "Columna 2:"
+            },
+            {
+              "textinfo": "La columna 2 crea una sección para dividir el área entre 2 columnas."
+            },
+            {
+              "imagedata": "column_two_component_icon",
+              "descriptionImage": "Componente Columna 2"
+            },
+            {
+              "titlesubsection": "Texto:"
+            },
+            {
+              "textinfo": "El componente de Texto permite colocar texto dentro de la página, y este texto se puede personalizar en la sección de Tipografia."
+            },
+            {
+              "imagedata": "text_component_icon",
+              "descriptionImage": "Componente de Texto"
+            },
+            {
+              "titlesubsection": "Enlace:"
+            },
+            {
+              "textinfo": "El componente enlace permite colocar un texto de hipervínculo que hace redireccionamiento al link establecido en su configuracion."
+            },
+            {
+              "imagedata": "link_component_icon",
+              "descriptionImage": "Componente de Enlace"
+            },
+            {
+              "titlesubsection": "Imagen:"
+            },
+            {
+              "textinfo": "El componente de imagen permite colocar una imagen dentro del Canvas."
+            },
+            {
+              "imagedata": "image_component_icon",
+              "descriptionImage": "Componente de Imagen"
+            },
+            {
+              "textinfo": "El tamaño se puede ajustar en la sección de Estilos del Menu Lateral."
+            },
+            {
+              "titlesubsection": "Video"
+            },
+            {
+              "textinfo": "El componente de video permite colocar una sección de video dentro del canvas."
+            },
+            {
+              "imagedata": "video_component_icon",
+              "descriptionImage": "Componente de Video"
+            },
+            {
+              "textinfo": "Las configuraciones del video se configuran dentro de la sección de Configuracion de Componente."
+            },
+            {
+              "textinfo": "La URL del video se configura dependiendo el proveedor (Youtube, Vimeo, o HTML5)."
+            },
+            {
+              "titlesubsection": "Mapa"
+            },
+            {
+              "textinfo": "El componente de mapa permite colocar un mapa con posición geográfica dentro del canvas."
+            },
+            {
+              "imagedata": "map_component_icon",
+              "descriptionImage": "Componente de Mapa"
+            },
+            {
+              "titlesubsection": "Enlace Contenedor"
+            },
+            {
+              "textinfo": "El enlace contenedor es un componente con similitud a un bloque, pero contiene un hipervínculo."
+            },
+            {
+              "imagedata": "a_container_component_icon",
+              "descriptionImage": "Componente de Enlace Contenedor"
+            },
+            {
+              "textinfo": "Al hacer click en el componente, este hará redireccionamiento al link establecido."
+            },
+            {
+              "textinfo": "Su configuracion es similar a la de un enlace/link."
+            },
+            {
+              "titlesubsection": "Lista"
+            },
+            {
+              "textinfo": "El componente de Lista permite desplegar una lista dentro del Canvas"
+            },
+            {
+              "imagedata": "list_component_icon",
+              "descriptionImage": "Componente de Mapa"
+            },
+            {
+              "titlesubsection": "Contenedor con Animación"
+            },
+            {
+              "textinfo": "El componente de Contenedor con Animación es un componente de contenedor que tendrá una animación durante la navegación de la página."
+            },
+            {
+              "imagedata": "animated_container_component_icon",
+              "descriptionImage": "Componente de Contenedor con Animación"
+            },
+            {
+              "textinfo": "Las animaciones pueden configurarse para seleccionar el estilo y la duracion."
+            },
+            {
+              "titlesubsection": "Modal"
+            },
+            {
+              "textinfo": "El componente de Modal es un tipo de dialogo que aparecera en la pantalla."
+            },
+            {
+              "imagedata": "modal_component_icon",
+              "descriptionImage": "Componente de Modal"
+            },
+            {
+              "textinfo": "El componente de Modal permite ingresar un dialogo dentro de la página. Cada dialogo es independiente, y se puede personalizar al desplegar el dialogo dentro de la sección de Configuración de Componente"
+            }
+          ]
+        },
+        {
+          "title": "Otros",
+          "id": "other_components",
+          "content": [
+            {
+              "textinfo": "Los componentes de esta categoría están enfocados en despliegue de información dinámico como imágenes u opciones."
+            },
+            {
+              "imagedata": "other_components_table",
+              "descriptionImage": "Componentes Otros"
+            },
+            {
+              "titlesubsection": "Carrusel:"
+            },
+            {
+              "textinfo": "El carrusel permite agregar dentro de la pagina un carrusel de imágenes que van en secuencia."
+            },
+            {
+              "imagedata": "carousel_component_icon",
+              "descriptionImage": "Componente de Carrusel"
+            },
+            {
+              "titlesubsection": "Menú desplegable:"
+            },
+            {
+              "textinfo": "El Menú desplegable es un componente el cual mostrará una caja con un nombre que al darle click desplegará las opciones."
+            },
+            {
+              "imagedata": "component_dropdown_menu_icon",
+              "descriptionImage": "Componente de Menú desplegable"
+            },
+            {
+              "titlesubsection": "Carrusel dinámico:"
+            },
+            {
+              "textinfo": "El carrusel dinámico es un componente para cargar la lista desde una colección configurada del proyecto, desde la sección de configuración se puede personalizar."
+            },
+            {
+              "imagedata": "dynamic_carousel_component_icon",
+              "descriptionImage": "Componente de Carrusel dinámico"
+            }
+          ]
+        },
+        {
+          "title": "Pagos",
+          "id": "payments_components",
+          "content": [
+            {
+              "textinfo": "Los componentes de esta categoría son para la configuración de compras dentro de la página, es importante tener configurados los métodos de pago desde la plataforma y las variables locales y globales necesarias."
+            },
+            {
+              "imagedata": "payments_components_table",
+              "descriptionImage": "Componentes Pagos"
+            },
+            {
+              "titlesubsection": "Carrusel Visualizar Carrito:"
+            },
+            {
+              "textinfo": "Este carrusel está dispuesto para mostrar la información del carrito de compras y desde la sección de configuración se puede utilizar definiendo las variables necesarias."
+            },
+            {
+              "imagedata": "carousel_cart_component_icon",
+              "descriptionImage": "Componente de Carrusel Visualizar Carrito"
+            },
+            {
+              "titlesubsection": "Método de pago:"
+            },
+            {
+              "textinfo": "El componente Método de Pago es el botón de pago, para ello se necesitan configurar los métodos de pago desde la plataforma."
+            },
+            {
+              "imagedata": "payment_method_component_icon",
+              "descriptionImage": "Componente de Método de pago"
+            },
+            {
+              "titlesubsection": "Visualizar compra:"
+            },
+            {
+              "textinfo": "El componente Visualizar compra es el resumen de la compra para poder mostrarse en la página."
+            },
+            {
+              "imagedata": "buy_resume_component_icon",
+              "descriptionImage": "Componente de Visualizar compra"
+            }
+          ]
+        },
+        {
+          "title": "Botones",
+          "id": "buttons_components",
+          "content": [
+            {
+              "textinfo": "Los componentes de esta categoría son los diferentes tipos de botones que se pueden utilizar en una página."
+            },
+            {
+              "imagedata": "buttons_components_table",
+              "descriptionImage": "Componentes Botones"
+            },
+            {
+              "titlesubsection": "Boton Hamburguesa con Menu"
+            },
+            {
+              "textinfo": "El botón de hamburguesa con menú es un componente de botón que al hacer click en él se despliega un menú lateral dentro de la página."
+            },
+            {
+              "imagedata": "hamburger_menu_component_icon",
+              "descriptionImage": "Componente de Boton Hamburguesa con Menu"
+            },
+            {
+              "titlesubsection": "Boton Estandar"
+            },
+            {
+              "textinfo": "Componente de botón estándar o un botón básico."
+            },
+            {
+              "imagedata": "standard_button_component_icon",
+              "descriptionImage": "Componente de Boton Estandar"
+            },
+            {
+              "titlesubsection": "Boton Enlace"
+            },
+            {
+              "textinfo": "Un botón que permite hacer redireccionamiento a otra página. La URL se ingresa de igual forma que los otros componentes con hipervínculo."
+            },
+            {
+              "imagedata": "link_button_component_icon",
+              "descriptionImage": "Componente de Boton Enlace"
+            }
+          ]
+        },
+        {
+          "title": "Formularios",
+          "id": "forms_components",
+          "content": [
+            {
+              "textinfo": "Aquí están los componentes relacionados a los formularios."
+            },
+            {
+              "imagedata": "forms_components_table",
+              "descriptionImage": "Componentes Formularios"
+            },
+            {
+              "titlesubsection": "Entrada de texto"
+            },
+            {
+              "textinfo": "Las entradas de texto son los campos de un formulario o las cajas de texto para que el usuario pueda ingresar información."
+            },
+            {
+              "imagedata": "input_text_component_icon",
+              "descriptionImage": "Componente de Entrada de texto"
+            },
+            {
+              "titlesubsection": "Selección"
+            },
+            {
+              "textinfo": "Las selecciones son los campos de un formulario para que el usuario pueda seleccionar entre diferentes opciones."
+            },
+            {
+              "imagedata": "select_component_icon",
+              "descriptionImage": "Componente de Selección"
+            }
+          ]
+        },
+        {
+          "title": "Base de datos",
+          "id": "database_components",
+          "content": [
+            {
+              "textinfo": "Los componentes de esta categoría son los que están relacionados con las colecciones de base de datos y cómo manipular esa información desde la página."
+            },
+            {
+              "imagedata": "database_components_table",
+              "descriptionImage": "Componentes Base de datos"
+            },
+            {
+              "textinfo": "Para el funcionamiento Correcto de los siguientes componentes, es necesario tener una coleccion de datos con el servicio solicitado activo."
+            },
+            {
+              "titlesubsection": "Leer/Listar"
+            },
+            {
+              "textinfo": "Componente de Lectura/Lista de una Colección de Datos. Permite visualizar datos de una colección designada dentro de la página."
+            },
+            {
+              "imagedata": "read_db_component_icon",
+              "descriptionImage": "Componente de Leer/Listar"
+            },
+            {
+              "imagedata": "setting_db_component_main",
+              "descriptionImage": "Ejemplo Configuracion de Componente"
+            },
+            {
+              "titlesubsection": "Agregar"
+            },
+            {
+              "textinfo": "Componente de Agregar datos a una Colección de Datos. Permite agregar datos a una colección designada dentro de la página."
+            },
+            {
+              "imagedata": "create_db_component_icon",
+              "descriptionImage": "Componente de Agregar"
+            },
+            {
+              "imagedata": "setting_db_component_main",
+              "descriptionImage": "Ejemplo Configuracion de Componente"
+            },
+            {
+              "titlesubsection": "Actualizar"
+            },
+            {
+              "textinfo": "Componente de Actualizar datos a una Colección de Datos. Permite actualizar un dato dentro de una colección designada en la página."
+            },
+            {
+              "imagedata": "update_db_component_icon",
+              "descriptionImage": "Componente de Actualizar"
+            },
+            {
+              "imagedata": "setting_db_component_main",
+              "descriptionImage": "Ejemplo Configuracion de Componente"
+            },
+            {
+              "titlesubsection": "Eliminar"
+            },
+            {
+              "textinfo": "Componente de Eliminar datos a una Colección de Datos. Permite eliminar un dato dentro de una colección designada en la página."
+            },
+            {
+              "imagedata": "delete_db_component_icon",
+              "descriptionImage": "Componente de Eliminar"
+            },
+            {
+              "imagedata": "setting_db_component_main",
+              "descriptionImage": "Ejemplo Configuracion de Componente"
+            },
+            {
+              "textinfo": "Los siguientes componentes requieren de un componente de lectura para su funcionamiento, si se ingresa en cualquier otro componente, no tendrá utilidad."
+            },
+            {
+              "titlesubsection": "Imagen DB"
+            },
+            {
+              "textinfo": "Un componente de tipo imagen que despliega una imagen dentro de la página."
+            },
+            {
+              "imagedata": "image_db_component_icon",
+              "descriptionImage": "Componente de Imagen DB"
+            },
+            {
+              "titlesubsection": "Video Dinámico."
+            },
+            {
+              "textinfo": "Un componente de tipo video que despliega un video desde la base de datos dentro de la página."
+            },
+            {
+              "imagedata": "video_db_component_icon",
+              "descriptionImage": "Componente de Video Dinámico"
+            }
+          ]
+        },
+        {
+          "title": "Interacción de Usuarios",
+          "id": "users_interaction_components",
+          "content": [
+            {
+              "textinfo": "Los componentes de esta categoría son los que están relacionados con la seguridad y la funcionalidad de los usuarios."
+            },
+            {
+              "imagedata": "users_interaction_components_table",
+              "descriptionImage": "Componentes Interacción de Usuarios"
+            },
+            {
+              "titlesubsection": "Iniciar Sesión"
+            },
+            {
+              "textinfo": "El componente de iniciar sesión desplegara un componente de tipo formulario donde se mostrarán los campos necesarios para que un usuario ingrese sus credenciales de autenticación para iniciar sesión dentro de una página."
+            },
+            {
+              "imagedata": "login_component_icon",
+              "descriptionImage": "Componente de Iniciar Sesion"
+            },
+            {
+              "titlesubsection": "Cerrar Sesión"
+            },
+            {
+              "textinfo": "El componente de cerrar sesión permite que el usuario autenticado cierre la sesión activa."
+            },
+            {
+              "imagedata": "logout_component_icon",
+              "descriptionImage": "Componente de Cerrar Sesion"
+            },
+            {
+              "titlesubsection": "Registrar Usuario"
+            },
+            {
+              "textinfo": "El componente para Registrar Usuario despliega todos los campos para crear un usuario dentro de la aplicación."
+            },
+            {
+              "imagedata": "register_component_icon",
+              "descriptionImage": "Componente de Registrar Usuario"
+            },
+            {
+              "titlesubsection": "Recuperar Contraseña"
+            },
+            {
+              "textinfo": "Componente que contiene el formulario para reestablecer la contraseña."
+            },
+            {
+              "imagedata": "restore_password_component_icon",
+              "descriptionImage": "Componente de Recuperar Contraseña"
+            },
+            {
+              "titlesubsection": "Actualizar Contraseña"
+            },
+            {
+              "textinfo": "Componente que contiene los campos para actualizar la contraseña del usuario autenticado."
+            },
+            {
+              "imagedata": "update_password_component_icon",
+              "descriptionImage": "Componente de Actualizar Contraseña"
+            },
+            {
+              "titlesubsection": "Actualizar Información de Usuario"
+            },
+            {
+              "textinfo": "Componente que permite actualizar toda la información del usuario autenticado."
+            },
+            {
+              "imagedata": "update_userinfo_component_icon",
+              "descriptionImage": "Componente de Actualizar Información de Usuario"
+            },
+            {
+              "titlesubsection": "Formulario para Recuperar Contraseña"
+            },
+            {
+              "textinfo": "Componente de formulario para que el usuario pueda reestablecer la contraseña; recibiendo instrucciones para restablecerla a su correo electrónico."
+            },
+            {
+              "imagedata": "form_restore_password_component_icon",
+              "descriptionImage": "Componente de Formulario para Recuperar Contraseña"
+            },
+            {
+              "titlesubsection": "Verificación de Correo"
+            },
+            {
+              "textinfo": "Componente contenedor que permite verificar el correo de la cuenta del usuario creado."
+            },
+            {
+              "imagedata": "verify_email_component_icon",
+              "descriptionImage": "Componente de Verificacion de Correo"
+            }
+          ]
+        },
+        {
+          "title": "Dinamismo",
+          "id": "dynamic_components",
+          "content": [
+            {
+              "textinfo": "Los componentes de esta categoría son los que están relacionados con las variables configuradas desde el editor."
+            },
+            {
+              "imagedata": "dynamic_components_table",
+              "descriptionImage": "Componentes Dinamismo"
+            },
+            {
+              "titlesubsection": "Variable"
+            },
+            {
+              "textinfo": "El componente de variable permite trabajar con las variables creadas dentro de la página."
+            },
+            {
+              "imagedata": "variable_component_icon",
+              "descriptionImage": "Componente de Variable"
+            },
+            {
+              "titlesubsection": "Dinamico Booleano"
+            },
+            {
+              "textinfo": "El componente de dinamico booleano permite trabajar con las variables de tipo Verdadero o Falso creadas dentro de la página."
+            },
+            {
+              "imagedata": "dynamic_boolean_component_icon",
+              "descriptionImage": "Componente de Dinamico Booleano"
+            },
+            {
+              "titlesubsection": "Estados de arreglo"
+            },
+            {
+              "textinfo": "El componente de Estados de arreglo permite trabajar con las variables de tipo lista creadas dentro de la página y que están relacionadas con las listas de Bases de datos."
+            },
+            {
+              "imagedata": "quantity_items_array_component_icon",
+              "descriptionImage": "Componente de Estados de arreglo"
+            }
+          ]
+        },
+        {
+          "title": "Iconos",
+          "id": "icons_components",
+          "content": [
+            {
+              "textinfo": "Los componentes de esta categoría son decorativos en forma de iconos."
+            },
+            {
+              "imagedata": "icons_components_table",
+              "descriptionImage": "Componentes n"
+            },
+            {
+              "titlesubsection": "Iconos de Google fonts"
+            },
+            {
+              "textinfo": "Este componente sirve para cargar iconos decorativos desde Google fonts, en la seccion de configuracion se puede seleccionar el icono de su preferencia."
+            },
+            {
+              "imagedata": "icons_google_component_icon",
+              "descriptionImage": "Componente de Iconos de Google fonts"
+            }
+          ]
+        },
+        {
+          "title": "Extras",
+          "id": "extra_components",
+          "content": [
+            {
+              "textinfo": "Los componentes de esta categoría son funcionalidades adicionales que pueden ser utilizadas en requerimientos concretos como por ejemplo:"
+            },
+            {
+              "imagedata": "extra_components_table",
+              "descriptionImage": "Componentes Extras"
+            },
+            {
+              "titlesubsection": "Conteo"
+            },
+            {
+              "textinfo": "Este componente es un contador configurable desde la seccion de configuracion."
+            },
+            {
+              "imagedata": "count_component_icon",
+              "descriptionImage": "Componente de Conteo"
+            },
+            {
+              "titlesubsection": "Cantidad de ítems"
+            },
+            {
+              "textinfo": "Este componente es el que permite cambiar la cantidad de ítems al momento de seleccionar la cantidad de un producto por ejemplo."
+            },
+            {
+              "imagedata": "change_quantity_component_icon",
+              "descriptionImage": "Componente de Cantidad de ítems"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Estilos",
+      "id": "editor_style_section",
+      "subsections":[
+        {
+          "title": "Disposicion",
+          "id": "position_style_manager",
+          "content": [
+            {
+              "textinfo": "Permite la edición de posición, vista y orden de los componentes."
+            },
+            {
+              "imagedata": "position_style_manager",
+              "descriptionImage": "Opciones de Disposicion"
+            },
+            {
+              "textinfo": "Entre las opciones se encuentra: "
+            },
+            {
+              "listData": [
+                {
+                  "bulletPoint": "Vista:",
+                  "infoBulletPoint": "comportamiento de la vista del componente."
+                },
+                {
+                  "bulletPoint": "Posición:",
+                  "infoBulletPoint": "posición del componente relativo al padre o componente que lo contenga."
+                },
+                {
+                  "bulletPoint": "Superior:",
+                  "infoBulletPoint": "posición a nivel superior del componente que lo contenga."
+                },
+                {
+                  "bulletPoint": "Derecho:",
+                  "infoBulletPoint": "posición en la derecha del componente que lo contenga."
+                },
+                {
+                  "bulletPoint": "Izquierdo:",
+                  "infoBulletPoint": "posición en la izquierda del componente que lo contenga."
+                },
+                {
+                  "bulletPoint": "Inferior:",
+                  "infoBulletPoint": "posición a nivel inferior del componente que lo contenga."
+                },
+                {
+                  "bulletPoint": "Índice Eje Z:",
+                  "infoBulletPoint": "posición a nivel del eje Z."
+                }
+              ]
+            },
+            {
+              "textinfo": "La sección de vista ofrece 4 opciones para el componente."
+            },
+            {
+              "imagedata": "position_view_select",
+              "descriptionImage": "Opciones de Vista"
+            },
+            {
+              "listData": [
+                {
+                  "bulletPoint": "Bloque: ",
+                  "infoBulletPoint": "es su formato estándar. Mantiene un formato de bloque en el componente que lo contiene y toma toda la anchura de la pantalla."
+                },
+                {
+                  "bulletPoint": "En línea: ",
+                  "infoBulletPoint": "se adapta el componente a la línea del componente que lo contiene, y su altura y anchura no es editable. "
+                },
+                {
+                  "bulletPoint": "Bloque en línea: ",
+                  "infoBulletPoint": "al igual que En línea, posiciona el componente que lo contiene y se puede editar su altura y anchura. "
+                },
+                {
+                  "bulletPoint": "No mostrar: ",
+                  "infoBulletPoint": "oculta el componente de la vista."
+                }
+              ]
+            },
+            {
+              "textinfo": "*Cada vista se puede adaptar según el formato del dispositivo en el que se este trabajando. Por lo tanto, un componente puede tener vista “bloque” en formato “Escritorio”, y “No mostrar” en formato “móvil, o celular”"
+            },
+            {
+              "textinfo": " "
+            },
+            {
+              "textinfo": "La posición del componente permite modificar la posición del componente según el padre o componente que lo contenga."
+            },
+            {
+              "imagedata": "position_type_select",
+              "descriptionImage": "Opciones de Posicion"
+            },
+            {
+              "listData": [
+                {
+                  "bulletPoint": "Estático: ",
+                  "infoBulletPoint": " es su posición estándar o por defecto. El componente queda en una posición estática en un orden definido."
+                },
+                {
+                  "bulletPoint": "Relativo: ",
+                  "infoBulletPoint": " permite tener una posición relativa a su posición normal. Permite que los componentes dentro de este puedan tener posiciones absolutas. "
+                },
+                {
+                  "bulletPoint": "Absoluto: ",
+                  "infoBulletPoint": " permite que el componente tenga una posición definida dentro del componente que lo contenga.. "
+                },
+                {
+                  "bulletPoint": "Fijado: ",
+                  "infoBulletPoint": " permite que el componente se mantenga en una posición fija en el navegador. Por lo tanto, se mantendrá en esa posición durante toda la navegación de la página."
+                }
+              ]
+            },
+            {
+              "textinfo": "Las coordenadas del componente se editan por medio de “superior”, “derecho”, “izquierdo”, “Inferior”. Este solo tendrá efecto si el componente tiene una posición “absoluto” en su estilo, y el padre es de posición “Relativo”."
+            },
+            {
+              "imagedata": "position_coordinates_manager",
+              "descriptionImage": "Coordenadas de Posicion"
+            },
+            {
+              "textinfo": "El índice en el eje Z permite posicionar la profundidad del elemento en el eje Z de la página."
+            },
+            {
+              "imagedata": "position_z_index_manager",
+              "descriptionImage": "Posicion en el Eje Z"
+            },
+            {
+              "textinfo": "La sección de Desbordamiento ofrece 4 opciones para el componente."
+            },
+            {
+              "imagedata": "overflow_view_select",
+              "descriptionImage": "Opciones de Desbordamiento"
+            },
+            {
+              "listData": [
+                {
+                  "bulletPoint": "Visible: ",
+                  "infoBulletPoint": "es la opción por defecto y permite que el contenido desbordado de un elemento se muestre fuera de sus límites definidos, sin recortes ni restricciones."
+                },
+                {
+                  "bulletPoint": "Ocultar: ",
+                  "infoBulletPoint": "la barra de scroll siempre estará oculta independientemente de si es necesaria o no. "
+                },
+                {
+                  "bulletPoint": "Desplazarse: ",
+                  "infoBulletPoint": "la barra de scroll siempre estará visible independientemente de si es necesaria o no. "
+                },
+                {
+                  "bulletPoint": "Auto: ",
+                  "infoBulletPoint": "se mostrará una barra de scroll en el elemento únicamente cuando el contenido del mismo se desborda."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "display_flex_manager",
+          "title": "Alineamiento Flexible",
+          "content":[
+            {
+              "textinfo": "El Alineamiento Flexible permite ajustar los elementos que estén contenidos dentro de un componente."
+            },
+            {
+              "textinfo": "Al habilitar el alineamiento flexible, los componentes se ordenarán según la dirección, alineamiento, y crecimiento. La dirección puede ser fila, columna, fila o columna inversas."
+            },
+            {
+              "imagedata": "display_flex_manager",
+              "descriptionImage": "Alineamiento Flexible"
+            },
+            {
+              "textinfo": "La opción de crecimiento de flex permite que los componentes se mantengan dentro de un solo margen o irse adaptando según la orientación."
+            },
+            {
+              "textinfo": "Ajustar Contenido dicta la posicion de los elementos dentro de un componente. Estos se pueden agrupar al inicio, al final, con espacio en medio, espacio entre ellos, o al centro respectivamente."
+            },
+            {
+              "textinfo": "Alinear elementos dicta la posición de todo el grupo de elementos de un componente. Estos pueden estirarse, quedar todos al inicio del componente o nivel superior, quedar al final o nivel inferior, o centrarse."
+            }
+          ]
+        },
+        {
+          "id": "dimension_manager",
+          "title": "Dimensiones",
+          "content": [
+            {
+              "textinfo": "La opción de Dimensiones permite editar las dimensiones del componente. Sus dimensiones pueden adaptarse por medio de pixeles, porcentajes o valores respectivos (ref: CSS)."
+            },
+            {
+              "imagedata": "dimension_manager",
+              "descriptionImage": "Alineamiento Flexible"
+            },
+            {
+              "textinfo": "Ancho y altura son sus valores estándar para determinar dicha dimensión. La altura mínima permite que el componente tenga una altura respectiva, y se adapta si este componente va creciendo. Max. Ancho limita la anchura del componente."
+            },
+            {
+              "textinfo": "El margen determina el espacio entre componentes."
+            },
+            {
+              "textinfo": "El Relleno determina el espacio dentro del componente."
+            }
+          ]
+        },
+        {
+          "id": "typography_manager",
+          "title": "Tipografia",
+          "content": [
+            {
+              "textinfo": "La tipografia permite personalizar el texto de un componente. "
+            },
+            {
+              "textinfo": "Se puede personalizar el tipo de letra, el tamaño de la fuente, el espesor o grosor de la letra, el color, alineación del texto, sombra, espacio de letras y la altura de salto de línea."
+            },
+            {
+              "imagedata": "typography_manager",
+              "descriptionImage": "Tipografia"
+            }
+          ]
+        },
+        {
+          "id": "decoration_manager",
+          "title": "Decoracion de Contenedor",
+          "content": [
+            {
+              "textinfo": "La decoración de contenedor permite modificar el estilo del contenedor del componente.  "
+            },
+            {
+              "imagedata": "decoration_manager",
+              "descriptionImage": "Decoracion de Contenedor"
+            },
+            {
+              "textinfo": "La opacidad permite modificar el nivel de opacidad del componente y de los elementos dentro de este."
+            },
+            {
+              "textinfo": "Borde Redondeado permite dar bordes al contenedor del componente."
+            },
+            {
+              "textinfo": "Bordes permite dar y personalizar el borde del contenedor del componente, el color del borde, grosor, y estilo del borde."
+            },
+            {
+              "textinfo": "Sombra de Caja permite darle un sombreado al contenedor del componente."
+            },
+            {
+              "textinfo": "El fondo permite modificar el fondo del contenedor del componente. Se puede agregar un color de fondo, un gradiente, o una imagen de fondo."
+            },
+            {
+              "textinfo": "Si el fondo es imagen, se presentan varias opciones para personalizar la imagen de fondo."
+            },
+            {
+              "imagedata": "decoration_background_image",
+              "descriptionImage": "Imagen de Fondo"
+            },
+            {
+              "listData": [
+                {
+                  "bulletPoint": "Repetir: ",
+                  "infoBulletPoint": " La imagen se repetirá en todo el fondo del contenedor. Si se selecciona la opción “no repetir”, la imagen no se repetirá, y quedará en una sola posición."
+                },
+                {
+                  "bulletPoint": "Posición de Fondo: ",
+                  "infoBulletPoint": "dicta la posición donde estará la imagen de fondo del contenedor. "
+                },
+                {
+                  "bulletPoint": "Plugin de fondo: ",
+                  "infoBulletPoint": "permite que el fondo se pueda adaptar durante la navegación o que se mantenga el fondo de forma fija. "
+                },
+                {
+                  "bulletPoint": "Tamaño de fondo:  ",
+                  "infoBulletPoint": "la imagen de fondo se adapta al contenedor. Al seleccionar auto, la imagen tendrá un tamaño automático definido, “Cubrir” permite que la imagen cubra todo el fondo del contenedor (La imagen se estira, por lo que se puede perder calidad), y “Contener”, donde la imagen mantendrá su dimensión original, pero se adaptara al contenedor."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "3d_manager",
+          "title": "Posicion 3D y otros",
+          "content": [
+            {
+              "textinfo": "Permite darle efectos de transición y transformación al componente seleccionado. "
+            },
+            {
+              "imagedata": "3d_manager",
+              "descriptionImage": "Posicion 3D y otros"
+            }
+          ]
+        },
+        {
+          "id": "classes_manager",
+          "title": "Clases",
+          "content": [
+            {
+              "textinfo": "Las clases permite compartir estilo entre los distintos componentes. Cada clase tiene su propia configuración de estilos, y estos se pueden compartir entre componentes. Es necesario tomar en consideración que, si se modifica una clase en otro componente, todos los componentes con esa clase serán modificados también. "
+            },
+            {
+              "imagedata": "classes_manager",
+              "descriptionImage": "Clases"
+            }
+          ]
+        },
+        {
+          "id": "state_style_manager",
+          "title": "Estado",
+          "content": [
+            {
+              "textinfo": "El estado permite definir la personalización del componente según el estado en el que se encuentra el componente. Hover: cuando el cursor del Mouse se encuentra encima del componente, Click: cuando se hace click en el componente. "
+            },
+            {
+              "imagedata": "state_style_manager",
+              "descriptionImage": "Estado"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Configuraciones Avanzadas",
+      "id": "editor_advanced_settings",
+      "subsections": [
+        {
+          "title": "Video",
+          "id": "editor_advanced_settings_video",
+          "content": [
+            {
+              "textinfo": "El componente de video trabaja con sus configuraciones básicas para desplegar un video dentro de la página."
+            },
+            {
+              "imagedata": "editor_advanced_settings_video",
+              "descriptionImage": "Configuraciones de Componente de Video"
+            },
+            {
+              "textinfo": "El “Provider” seria el tipo de proveedor del video ya sea de HTML, Youtube o Vimeo. El “Source” es la fuente o url de donde proviene el video. “Poster” una imagen representativa. “Autoplay” es la opción para reproducir el video automáticamente. “Loop” permite que el video se repita. “Controls” permite desplegar los controles para el video. “Subir Video” permite subir un video directamente al componente, y este se guardará en la Multimedia del Proyecto."
+            }
+          ]
+        },
+        {
+          "title": "Mapa",
+          "id": "editor_advanced_settings_map",
+          "content": [
+            {
+              "textinfo": "El componente de mapa utiliza los atributos de “Address” para tomar la coordenada o posicion solicitada, “Map type” para el tipo de mapa a mostrar, y “Zoom” para acercar o alejar el mapa del punto seleccionado."
+            },
+            {
+              "imagedata": "editor_advanced_settings_map",
+              "descriptionImage": "Configuraciones de Componente de Mapa"
+            }
+          ]
+        },
+        {
+          "title": "Base de Datos/Colección de Datos",
+          "id": "editor_advanced_settings_database",
+          "content": [
+            {
+              "imagedata": "setting_db_component_main",
+              "descriptionImage": "Ejemplo Configuracion de Componente"
+            },
+            {
+              "textinfo": "Los componentes Base de Datos tiene 2 configuraciones importantes."
+            },
+            {
+              "listData": [
+                {
+                  "bulletPoint": "Entity Selection (Seleccion de Coleccion):",
+                  "infoBulletPoint": "selecciona la colección a la que se hará la petición (dependiendo del componente seleccionado)"
+                },
+                {
+                  "bulletPoint": "Endpoint Selection (Seleccion de Servicio): ",
+                  "infoBulletPoint": "selecciona el servicio del componente a la que se realizara la petición a la colección de Datos."
+                }
+              ]
+            },
+            {
+              "textinfo": "*Es importante tener en consideración que la colección a la que se realizará la petición tenga habilitado dicho servicio, sino no se verá alguna opción dentro de “Endpoint Selection”."
+            },
+            {
+              "textinfo": "En otros casos se tendrá el atributo “Filter” o Filtro."
+            },
+            {
+              "imagedata": "editor_advanced_settings_db_filter",
+              "descriptionImage": "Configuracion de Filtro"
+            },
+            {
+              "textinfo": "Este es cuando se requiere de un valor para realizar la petición (por ejemplo, editar un registro dentro de la colección de datos). Por lo tanto, es necesario que la pagina en la que se este trabajando tenga parámetros. Si no hay parámetros, no habrá valores para el filtrado."
+            },
+            {
+              "textinfo": "Existen otros atributos como “Acción Exitosa”, y “Mensaje” (dependiendo de Acción Exitosa). Solo se encuentran en ciertos componentes."
+            },
+            {
+              "imagedata": "editor_advanced_settings_db_actions",
+              "descriptionImage": "Configuracion de Acciones"
+            },
+            {
+              "textinfo": "Si la colección de datos seleccionada para un componente de “Agregar” es de tipo [Bucket], se mostrará la opción de cuantos archivos se pueden subir."
+            },
+            {
+              "imagedata": "editor_advanced_settings_db_bucket_options",
+              "descriptionImage": "Configuracion de Subir Archivos"
+            },
+            {
+              "textinfo": "Si la colección tiene campos de tipo “Relación de Datos”, estos se pueden manejar por medio de Parámetros o por Valores. "
+            },
+            {
+              "imagedata": "editor_advanced_settings_db_input_manager",
+              "descriptionImage": "Configuracion de Relaciones"
+            },
+            {
+              "textinfo": "Si es por “parámetro”, se escoge el parámetro de la pagina con la que se esté trabajando, y se elimina el campo ya que no es necesario ingresar el valor en el formulario. Si es por “input”, entonces el campo se mantendrá dentro del componente."
+            },
+            {
+              "imagedata": "editor_advanced_settings_db_relation_fields_manager",
+              "descriptionImage": "Modal para manejar campos de Relacion"
+            }
+          ]
+        },
+        {
+          "title": "“Link” o Redireccionamiento",
+          "id": "editor_advanced_settings_link",
+          "content": [
+            {
+              "textinfo": "Los componentes con algún tipo de redireccionamiento tienen sus configuraciones básicas."
+            },
+            {
+              "imagedata": "editor_advanced_settings_link",
+              "descriptionImage": "Configuracion de Link, Redireccionamiento y Ventana"
+            },
+            {
+              "listData": [
+                {
+                  "bulletPoint": "Target (Ventana)",
+                  "infoBulletPoint": "indica si el redireccionamiento se realiza directamente en la misma pagina o si este abrirá otra pestaña."
+                },
+                {
+                  "bulletPoint": "Redireccionamiento: ",
+                  "infoBulletPoint": "puede ser “Custom” o “Local”. Si es “Custom”, puede ser cualquier link. Si es “Local”, el redireccionamiento es entre las mismas páginas dentro del proyecto."
+                }
+              ]
+            },
+            {
+              "textinfo": "*El “Vinculo” solo existe para el redireccionamiento “Custom”."
+            },
+            {
+              "textinfo": "En caso de ser redireccionamiento “Local”, se desplegará otra opción con las paginas disponibles dentro del proyecto."
+            },
+            {
+              "imagedata": "editor_advanced_settings_link_local",
+              "descriptionImage": "Paginas de Proyecto para Redireccionar"
+            },
+            {
+              "textinfo": "Si el componente se encuentra dentro de un componente de “Lectura de Colección de Datos”, y la pagina a la que se hará el redireccionamiento tiene parámetros, se desplegara otra opción dentro de las configuraciones."
+            },
+            {
+              "imagedata": "editor_advanced_settings_link_local_with_db",
+              "descriptionImage": "Configuracion para manejar Link"
+            },
+            {
+              "textinfo": "Al hacer click en “Manejar Link”, se desplegará un modal donde se listaran todos los parámetros de la pagina a la que se hará redireccionamiento, y los campos de la colección de datos según los campos capturados."
+            },
+            {
+              "imagedata": "editor_advanced_settings_link_local_with_db_redirect_manager",
+              "descriptionImage": "Modal para Manejar Link"
+            },
+            {
+              "textinfo": "Si la colección tiene campos de tipo “Relación de Datos”, estos se pueden manejar por medio de Parámetros o por Valores. "
+            }
+          ]
+        },
+        {
+          "title": "Video Dinamico",
+          "id": "editor_advanced_settings_dynamic_video",
+          "content": [
+            {
+              "textinfo": "El componente de “Video Dinámico” requiere estar dentro de un componente de “Lectura de Colección de Datos”, así tomara un valor que sea de tipo “cadena” de dicha colección."
+            },
+            {
+              "textinfo": "La configuracion de este elemento es:"
+            },
+            {
+              "imagedata": "editor_advanced_settings_dynamic_video",
+              "descriptionImage": "Configuraciones de Componente de Video Dinamico"
+            },
+            {
+              "textinfo": "Donde los valores para URL son tomados de los campos de la colección de datos seleccionada del componente de “Lectura de Colección de Datos”."
+            }
+          ]
+        },
+        {
+          "title": "Calendario",
+          "id": "editor_advanced_settings_calendar",
+          "content": [
+            {
+              "textinfo": "Es necesario que este el plugin de “Calendario” en el proyecto para poder utilizar este componente."
+            },
+            {
+              "imagedata": "editor_advanced_settings_calendar",
+              "descriptionImage": "Configuraciones de Calendario"
+            },
+            {
+              "textinfo": "El “state” muestra el estado del calendario (Sea el calendario, horarios de la fecha, y un formulario), y “calendario” selecciona el calendario creado en el plugin de “Calendario” en el proyecto."
+            }
+          ]
+        },
+        {
+          "title": "Variable",
+          "id": "editor_advanced_settings_variable",
+          "content": [
+            {
+              "textinfo": "El componente de variable toma las variables con las que trabajara el componente."
+            },
+            {
+              "imagedata": "editor_advanced_settings_variable",
+              "descriptionImage": "Configuraciones de Variable"
+            },
+            {
+              "textinfo": "Si es de tipo “Global”, toma todas las variables a nivel del proyecto (cualquier variable creada entre las páginas), si es tipo “local” solo toma las variables en la página actual."
+            }
+          ]
+        },
+        {
+          "title": "Dinamico Booleano",
+          "id": "editor_advanced_settings_dynamic_boolean",
+          "content": [
+            {
+              "textinfo": "El componente trabaja con la configuración principal “Tipo de Verificación”. Si es de “Variables”, escogerá todas las variables creadas dentro de la página y/o proyecto."
+            },
+            {
+              "imagedata": "editor_advanced_settings_dynamic_boolean",
+              "descriptionImage": "Configuraciones de Dinamico Booleano"
+            },
+            {
+              "textinfo": "Si es de tipo “Base de Datos”, tomara todos los campos del componente de “Lectura de Colección de Datos” (fuera de este no tomara ningún valor)."
+            },
+            {
+              "imagedata": "editor_advanced_settings_dynamic_boolean_with_db",
+              "descriptionImage": "Configuraciones de Dinamico Booleano por Campos"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Variables",
+      "id": "editor_variables",
+      "subsections":[
+        {
+          "title": "Sobre Variables",
+          "id": "editor_variables_main",
+          "content": [
+            {
+              "textinfo": "En caso de que se necesite manejar variables dentro de la página, se debe hacer click en el botón de “Variables”."
+            },
+            {
+              "imagedata": "editor_variable_icon",
+              "descriptionImage": "Boton de Variables"
+            },
+            {
+              "textinfo": "Desplegara un menú para manejar y crear las variables. Las variables se manejan de dos formas:"
+            },
+            {
+              "listData": [
+                {
+                  "bulletPoint": "Locales:",
+                  "infoBulletPoint": "estas variables son solo a nivel de página."
+                },
+                {
+                  "bulletPoint": "Globales: ",
+                  "infoBulletPoint": "estas variables son a nivel de proyecto, y cualquier pagina puede acceder a ellas."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Crear & Manejar Variables",
+          "id": "editor_variables_management",
+          "content": [
+            {
+              "imagedata": "editor_variable_manager_area",
+              "descriptionImage": "Menú de Variables"
+            },
+            {
+              "textinfo": "Al momento de agregar una variable, se despliega un modal donde se designa la información de la variable como “Etiqueta” o el nombre, “Slug” o identificador único, y “Tipo” para dar el tipo de variable ya sea de tipo ‘cadena’, ‘booleano’, o ‘numero’."
+            },
+            {
+              "imagedata": "editor_variable_manager_modal",
+              "descriptionImage": "Modal para agregar Variables"
+            }
+          ]
+        }
+      ]
+    }
+    
+  ]
+}
