@@ -46,7 +46,7 @@ export default function RenderDocumentation(jsondata: objectDataInterface) {
               <div
                 key={itemdata.id}
               >
-                <h2 className="text-2xl font-bold text-[#1a202c]">{itemdata.title}</h2>
+                <h2 className="text-2xl font-bold text-[#1a202c]" style={{marginTop: '50px', marginBottom: '25px'}}>{itemdata.title}</h2>
                 <div
                   style={{
                     boxShadow: '0px 5px 8px 0px rgba(0, 0, 0, 0.25)',
