@@ -76,7 +76,7 @@ export default function TemplatePage({ params }: { params: Promise<{ id: string 
   const handleObtainTemplate = () => {
     if (!template) return
     const url = `https://platform.loftyapps.com?createproject=true&idtemplate=${template._id}`
-    window.open(url, '_blank', 'noopener,noreferrer')
+    window.location.href = url
   }
 
   if (loading) {
