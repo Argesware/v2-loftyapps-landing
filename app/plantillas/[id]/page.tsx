@@ -106,9 +106,8 @@ export default function TemplatePage({ params }: { params: Promise<{ id: string 
     <div className="flex min-h-screen flex-col bg-[#e0e5ec] text-[#2c3e50]">
       <main className="flex-1 pt-24">
         {/* Breadcrumb Navigation */}
-        <div className="container mx-auto px-4 md:px-6 py-8">
-         
-          <div className="border-b border-gray-300/50 mb-8"></div>
+        <div className="container mx-auto px-4 md:px-6 pt-8 pb-2">
+          <div className="border-b border-gray-300/50 mb-1"></div>
           <Link
             href="/plantillas"
             className="inline-flex items-center gap-2 text-gray-600 hover:text-[#0891b2] transition-colors"
@@ -119,7 +118,7 @@ export default function TemplatePage({ params }: { params: Promise<{ id: string 
         </div>
 
         {/* Template Hero */}
-        <section className="py-12 px-4 md:px-6">
+        <section className="pt-4 pb-12 px-4 md:px-6">
           <div className="container mx-auto max-w-6xl">
             <ScrollReveal>
               <div className="grid md:grid-cols-2 gap-12 items-center">
