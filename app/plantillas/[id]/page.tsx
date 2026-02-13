@@ -121,7 +121,7 @@ export default function TemplatePage({ params }: { params: Promise<{ id: string 
         <section className="pt-4 pb-12 px-4 md:px-6">
           <div className="container mx-auto max-w-6xl">
             <ScrollReveal>
-              <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="grid md:grid-cols-2 gap-12 items-start">
                 <div>
                   {template.category && (
                     <div className="inline-block neu-flat px-4 py-2 rounded-full mb-6">
@@ -161,7 +161,7 @@ export default function TemplatePage({ params }: { params: Promise<{ id: string 
                 </div>
                 <div className="neu-flat rounded-2xl overflow-hidden">
                   {(template.slug || template.url) ? (
-                    <div className="w-full h-[600px]">
+                    <div className="w-full h-[800px]">
                       <Thumbnail
                         url={`https://${template.slug || template.url}.loftyapps.website`}
                         iframeHeight={1920}
@@ -169,7 +169,7 @@ export default function TemplatePage({ params }: { params: Promise<{ id: string 
                       />
                     </div>
                   ) : (
-                    <div className="w-full h-[600px] flex items-center justify-center bg-gray-100">
+                    <div className="w-full h-[800px] flex items-center justify-center bg-gray-100">
                       <p className="text-gray-400">Vista previa no disponible</p>
                     </div>
                   )}
