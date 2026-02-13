@@ -24,6 +24,7 @@ interface Template {
   name: string
   description: string
   url: string
+  slug?: string
   price: number
   category?: string
 }
@@ -42,7 +43,8 @@ export default function PlantillasPage() {
           _id: project._id || project.id || '',
           name: project.name || '',
           description: project.description || '',
-          url: project.url || project.domain || project.slug || '',
+          url: project.slug || project.url || project.domain || '',
+          slug: project.slug,
           price: project.price ?? 0,
           category: project.category
         }))

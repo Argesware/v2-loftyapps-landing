@@ -15,6 +15,7 @@ interface Template {
   name: string
   description: string
   url: string
+  slug?: string
   price: number
   category?: string
 }
@@ -35,11 +36,13 @@ export default function TemplatesCard({ templates, onTemplateClick }: TemplatesC
           >
             <div className="relative overflow-hidden bg-[#e9e8e5] w-full rounded-t-xl">
               <div className="flex justify-center items-center overflow-hidden w-full h-64 rounded-t-xl mx-auto">
-                {template.url && (
+                {(template.slug || template.url) && (
                   <Thumbnail
-                    url={template.url.startsWith('http')
-                      ? template.url
-                      : `https://${template.url}.loftyapps.website`}
+                    url={
+                      (template.slug || template.url).startsWith('http')
+                        ? (template.slug || template.url)
+                        : `https://${template.slug || template.url}.loftyapps.website`
+                    }
                     iframeHeight={1920}
                     iframeWidth={1920}
                     className="w-full h-full"
