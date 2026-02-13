@@ -207,10 +207,10 @@ export default function DocumentacionPage() {
   return (
     <div className="flex min-h-screen flex-col bg-[#e0e5ec] text-[#2c3e50]">
       {/* Main Content */}
-      <div className="flex pt-20 min-h-screen">
+      <div className="flex flex-col md:flex-row pt-20 min-h-screen">
         {/* Sidebar */}
         <aside
-          className={`fixed left-0 top-20 h-[calc(100vh-5rem)] w-72 border-r border-gray-300/50 bg-[#e0e5ec] overflow-y-auto transition-transform ${sidebarOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0 z-40`}
+          className={`relative md:sticky md:top-20 md:h-[calc(100vh-5rem)] md:w-72 w-full border-r md:border-r border-gray-300/50 bg-[#e0e5ec] overflow-y-auto transition-transform z-40`}
         >
           <div className="p-6 space-y-6">
             {/* Search */}
@@ -249,8 +249,11 @@ export default function DocumentacionPage() {
         </aside>
 
         {/* Content Area */}
-        <main className={`flex-1 transition-all ${sidebarOpen ? "md:ml-72" : ""}`}>
-          <div className="container mx-auto px-4 md:px-8 py-12 max-w-4xl">
+        <main className="w-full md:flex-1 transition-all">
+          <div
+            className="mx-auto px-4 md:px-8 lg:px-16 py-12"
+            style={{ maxWidth: '85vw', width: '100%' }}
+          >
             {currentSection && (
               <div className="space-y-8">
                 {/* Header */}
