@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import ScrollReveal from "@/components/scroll-reveal";
+import Image from "next/image";
 
 export default function LandingPage() {
   const [prompt, setPrompt] = useState("");
@@ -316,14 +317,14 @@ export default function LandingPage() {
             </ScrollReveal>
             <ScrollReveal direction="up" delay={100}>
               <div className="flex flex-wrap items-center justify-center gap-12 md:gap-20 opacity-30 grayscale">
-                <div className="text-2xl font-black text-[#2c3e50]">ACME</div>
                 <div className="text-2xl font-black text-[#2c3e50]">
-                  GlobalBank
+                  <Image src={"/images/fedecamara.png"} width={300} height={300} alt="Fedecamara Logo" />
                 </div>
-                <div className="text-2xl font-black text-[#2c3e50]">Nebula</div>
-                <div className="text-2xl font-black text-[#2c3e50]">Vertex</div>
                 <div className="text-2xl font-black text-[#2c3e50]">
-                  Horizon
+                  <Image src={"/images/europea.png"} width={300} height={300} alt="Europea Logo" />
+                </div>
+                <div className="text-2xl font-black text-[#2c3e50]">
+                  <Image src={"/images/bid.png"} width={300} height={300} alt="Bid Logo" />
                 </div>
               </div>
             </ScrollReveal>

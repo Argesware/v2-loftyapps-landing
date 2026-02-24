@@ -10,25 +10,62 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.app',
+  title: {
+    default: 'LoftyApps',
+    template: '%s | LoftyApps'
+  },
+  description: 'Lofty Apps es una plataforma no-code que permite crear sitios web, tiendas en línea y aplicaciones web de forma rápida, profesional y sin necesidad de conocimientos técnicos.',
+  keywords: ['plantillas', 'desarrollo web', 'herramientas', 'LoftyApps', 'templates', 'developer tools'],
+  authors: [{ name: 'LoftyApps' }],
+  creator: 'LoftyApps',
+  publisher: 'LoftyApps',
+  metadataBase: new URL('https://loftyapps.com'),
   icons: {
     icon: [
       {
-        url: '/icon-light-32x32.png',
+        url: '/favicon.ico',
+        sizes: '16x16 32x32',
+        type: 'image/x-icon',
+      },
+      {
+        url: '/favicon.ico',
+        sizes: '32x32',
+        type: 'image/png',
         media: '(prefers-color-scheme: light)',
       },
       {
-        url: '/icon-dark-32x32.png',
+        url: '/favicon.ico',
+        sizes: '32x32',
+        type: 'image/png',
         media: '(prefers-color-scheme: dark)',
       },
       {
-        url: '/icon.svg',
+        url: '/favicon.ico',
         type: 'image/svg+xml',
       },
     ],
-    apple: '/apple-icon.png',
+    apple: [
+      {
+        url: '/favicon.ico',
+        sizes: '180x180',
+        type: 'image/png',
+      }
+    ],
+    shortcut: '/favicon.ico',
+  },
+  manifest: '/manifest.json',
+  viewport: 'width=device-width, initial-scale=1',
+  robots: 'index, follow',
+  openGraph: {
+    type: 'website',
+    siteName: 'LoftyApps',
+    title: 'LoftyApps',
+    description: 'Lofty Apps es una plataforma no-code que permite crear sitios web, tiendas en línea y aplicaciones web de forma rápida, profesional y sin necesidad de conocimientos técnicos.',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'LoftyApps',
+    description: 'Lofty Apps es una plataforma no-code que permite crear sitios web, tiendas en línea y aplicaciones web de forma rápida, profesional y sin necesidad de conocimientos técnicos.',
   },
 }
 
