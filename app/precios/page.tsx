@@ -1,9 +1,10 @@
 "use client"
 
-import Link from "next/link"
 import { Check, X, ArrowRight } from "lucide-react"
-import { ScrollReveal } from "@/components/scroll-reveal"
-import CurrencySelector, { useCurrency } from "@/components/currency-selector"
+import { useEffect } from "react"
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import { useCurrency } from "@/components/currency-selector"
 
 const pricingData = {
   gratuito: {
@@ -67,6 +68,14 @@ const pricingData = {
 export default function PreciosPage() {
   const currency = useCurrency()
 
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+      easing: 'ease-out-cubic',
+      offset: 100
+    });
+  }, []);
+
   const formatPrice = (priceUSD: number, priceHNL: number) => {
     if (currency === "HNL") {
       return `L ${priceHNL.toLocaleString()}`
@@ -86,21 +95,17 @@ export default function PreciosPage() {
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-[#0891b2]/10 rounded-full blur-[120px] pointer-events-none" />
 
           <div className="container relative mx-auto px-4 text-center md:px-6">
-            <ScrollReveal direction="up" delay={100}>
-              <h1 className="mx-auto max-w-4xl text-5xl font-bold tracking-tight md:text-7xl text-[#1a202c] pb-4 drop-shadow-lg">
-                Planes simples,
-                <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2c3e50] to-gray-500">
-                  precios transparentes.
-                </span>
-              </h1>
-            </ScrollReveal>
+            <h1 data-aos="zoom-in" data-aos-delay="100" className="mx-auto max-w-4xl text-5xl font-bold tracking-tight md:text-7xl text-[#1a202c] pb-4 drop-shadow-lg">
+              Planes simples,
+              <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2c3e50] to-gray-500">
+                precios transparentes.
+              </span>
+            </h1>
 
-            <ScrollReveal direction="up" delay={200}>
-              <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-600 md:text-xl leading-relaxed">
-                Elige el plan perfecto para tu proyecto. Cambia o cancela en cualquier momento.
-              </p>
-            </ScrollReveal>
+            <p data-aos="zoom-in" data-aos-delay="200" className="mx-auto mt-6 max-w-2xl text-lg text-gray-600 md:text-xl leading-relaxed">
+              Elige el plan perfecto para tu proyecto. Cambia o cancela en cualquier momento.
+            </p>
           </div>
         </section>
 
@@ -109,7 +114,7 @@ export default function PreciosPage() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
               {/* Free Plan */}
-              <ScrollReveal direction="up" delay={0}>
+              <div data-aos="zoom-in">
                 <div className="neu-flat p-8 flex flex-col h-full">
                   <div className="mb-8">
                     <h3 className="text-2xl font-bold text-[#1a202c] mb-2">{pricingData.gratuito.name}</h3>
@@ -149,10 +154,10 @@ export default function PreciosPage() {
                     ))}
                   </div>
                 </div>
-              </ScrollReveal>
+              </div>
 
               {/* Pro Plan - Popular */}
-              <ScrollReveal direction="up" delay={100}>
+              <div data-aos="zoom-in" data-aos-delay="100">
                 <div className="neu-flat p-8 flex flex-col h-full relative border-2 border-[#0891b2]/20">
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                     <div className="neu-btn-primary px-6 py-1 text-sm font-bold">Más Popular</div>
@@ -191,10 +196,10 @@ export default function PreciosPage() {
                     ))}
                   </div>
                 </div>
-              </ScrollReveal>
+              </div>
 
               {/* Medio Plan */}
-              <ScrollReveal direction="up" delay={200}>
+              <div data-aos="zoom-in" data-aos-delay="200">
                 <div className="neu-flat p-8 flex flex-col h-full">
                   <div className="mb-8">
                     <h3 className="text-2xl font-bold text-[#1a202c] mb-2">{pricingData.medio.name}</h3>
@@ -229,10 +234,10 @@ export default function PreciosPage() {
                     ))}
                   </div>
                 </div>
-              </ScrollReveal>
+              </div>
 
               {/* Avanzado Plan */}
-              <ScrollReveal direction="up" delay={300}>
+              <div data-aos="zoom-in" data-aos-delay="300">
                 <div className="neu-flat p-8 flex flex-col h-full">
                   <div className="mb-8">
                     <h3 className="text-2xl font-bold text-[#1a202c] mb-2">{pricingData.avanzado.name}</h3>
@@ -267,7 +272,7 @@ export default function PreciosPage() {
                     ))}
                   </div>
                 </div>
-              </ScrollReveal>
+              </div>
             </div>
           </div>
         </section>
@@ -275,61 +280,51 @@ export default function PreciosPage() {
         {/* FAQ Section */}
         <section className="py-24 md:py-32">
           <div className="container mx-auto px-4 md:px-6 max-w-4xl">
-            <ScrollReveal direction="up" delay={0}>
-              <div className="text-center mb-16">
-                <h2 className="text-3xl font-bold tracking-tight text-[#1a202c] md:text-5xl mb-6">
-                  Preguntas Frecuentes
-                </h2>
-                <p className="text-lg text-gray-600">
-                  ¿Tienes dudas? Aquí están las respuestas a las preguntas más comunes.
-                </p>
-              </div>
-            </ScrollReveal>
+            <div data-aos="zoom-in" className="text-center mb-16">
+              <h2 className="text-3xl font-bold tracking-tight text-[#1a202c] md:text-5xl mb-6">
+                Preguntas Frecuentes
+              </h2>
+              <p className="text-lg text-gray-600">
+                ¿Tienes dudas? Aquí están las respuestas a las preguntas más comunes.
+              </p>
+            </div>
 
             <div className="space-y-6">
-              <ScrollReveal direction="up" delay={0}>
-                <div className="neu-flat p-6">
-                  <h3 className="text-lg font-bold text-[#1a202c] mb-3">
-                    ¿Puedo cambiar de plan en cualquier momento?
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    Sí, puedes actualizar o degradar tu plan en cualquier momento. Los cambios se aplican inmediatamente
-                    y se ajusta el cobro proporcionalmente.
-                  </p>
-                </div>
-              </ScrollReveal>
+              <div data-aos="zoom-in" className="neu-flat p-6">
+                <h3 className="text-lg font-bold text-[#1a202c] mb-3">
+                  ¿Puedo cambiar de plan en cualquier momento?
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Sí, puedes actualizar o degradar tu plan en cualquier momento. Los cambios se aplican inmediatamente
+                  y se ajusta el cobro proporcionalmente.
+                </p>
+              </div>
 
-              <ScrollReveal direction="up" delay={100}>
-                <div className="neu-flat p-6">
-                  <h3 className="text-lg font-bold text-[#1a202c] mb-3">¿Qué métodos de pago aceptan?</h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    Aceptamos todas las tarjetas de crédito principales (Visa, Mastercard, American Express) y PayPal.
-                    Los planes empresariales pueden pagar por factura.
-                  </p>
-                </div>
-              </ScrollReveal>
+              <div data-aos="zoom-in" data-aos-delay="100" className="neu-flat p-6">
+                <h3 className="text-lg font-bold text-[#1a202c] mb-3">¿Qué métodos de pago aceptan?</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Aceptamos todas las tarjetas de crédito principales (Visa, Mastercard, American Express) y PayPal.
+                  Los planes empresariales pueden pagar por factura.
+                </p>
+              </div>
 
-              <ScrollReveal direction="up" delay={200}>
-                <div className="neu-flat p-6">
-                  <h3 className="text-lg font-bold text-[#1a202c] mb-3">¿Hay algún costo oculto?</h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    No, todos nuestros precios son transparentes. El precio que ves es el precio que pagas. Sin cargos
-                    adicionales ni sorpresas.
-                  </p>
-                </div>
-              </ScrollReveal>
+              <div data-aos="zoom-in" data-aos-delay="200" className="neu-flat p-6">
+                <h3 className="text-lg font-bold text-[#1a202c] mb-3">¿Hay algún costo oculto?</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  No, todos nuestros precios son transparentes. El precio que ves es el precio que pagas. Sin cargos
+                  adicionales ni sorpresas.
+                </p>
+              </div>
 
-              <ScrollReveal direction="up" delay={300}>
-                <div className="neu-flat p-6">
-                  <h3 className="text-lg font-bold text-[#1a202c] mb-3">
-                    ¿Ofrecen descuentos para estudiantes o ONGs?
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    Sí, ofrecemos descuentos especiales para estudiantes, educadores y organizaciones sin fines de
-                    lucro. Contáctanos para más información.
-                  </p>
-                </div>
-              </ScrollReveal>
+              <div data-aos="zoom-in" data-aos-delay="300" className="neu-flat p-6">
+                <h3 className="text-lg font-bold text-[#1a202c] mb-3">
+                  ¿Ofrecen descuentos para estudiantes o ONGs?
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Sí, ofrecemos descuentos especiales para estudiantes, educadores y organizaciones sin fines de
+                  lucro. Contáctanos para más información.
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -337,33 +332,31 @@ export default function PreciosPage() {
         {/* CTA Section */}
         <section className="relative py-24 md:py-32 overflow-hidden">
           <div className="container relative mx-auto px-4 text-center md:px-6">
-            <ScrollReveal direction="up" delay={0}>
-              <div className="neu-flat p-12 md:p-20 max-w-5xl mx-auto relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-64 h-64 bg-[#0891b2]/10 blur-[80px] rounded-full pointer-events-none" />
-                <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/10 blur-[80px] rounded-full pointer-events-none" />
+            <div data-aos="zoom-in" className="neu-flat p-12 md:p-20 max-w-5xl mx-auto relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-[#0891b2]/10 blur-[80px] rounded-full pointer-events-none" />
+              <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/10 blur-[80px] rounded-full pointer-events-none" />
 
-                <h2 className="mx-auto max-w-3xl text-4xl font-bold tracking-tight text-[#1a202c] md:text-5xl mb-6 relative z-10">
-                  ¿Listo para comenzar?
-                </h2>
-                <p className="mx-auto max-w-xl text-lg text-gray-600 mb-10 relative z-10">
-                  Únete a miles de creadores construyendo aplicaciones increíbles con Lofty Apps.
-                </p>
-                <div className="flex flex-col items-center justify-center gap-6 sm:flex-row relative z-10">
-                  <button
-                    className="neu-btn-primary h-14 px-10 text-lg font-bold w-full sm:w-auto flex items-center justify-center gap-2"
-                    onClick={() => redirectTo()} 
-                  >
-                    Comenzar Gratis <ArrowRight className="h-5 w-5" />
-                  </button>
-                  <button
-                    className="neu-btn h-14 px-10 text-lg font-medium w-full sm:w-auto"
-                    onClick={() => window.location.href="#lofty-price-section"}
-                  >
-                    Comparar Planes
-                  </button>
-                </div>
+              <h2 className="mx-auto max-w-3xl text-4xl font-bold tracking-tight text-[#1a202c] md:text-5xl mb-6 relative z-10">
+                ¿Listo para comenzar?
+              </h2>
+              <p className="mx-auto max-w-xl text-lg text-gray-600 mb-10 relative z-10">
+                Únete a miles de creadores construyendo aplicaciones increíbles con Lofty Apps.
+              </p>
+              <div className="flex flex-col items-center justify-center gap-6 sm:flex-row relative z-10">
+                <button
+                  className="neu-btn-primary h-14 px-10 text-lg font-bold w-full sm:w-auto flex items-center justify-center gap-2"
+                  onClick={() => redirectTo()} 
+                >
+                  Comenzar Gratis <ArrowRight className="h-5 w-5" />
+                </button>
+                <button
+                  className="neu-btn h-14 px-10 text-lg font-medium w-full sm:w-auto"
+                  onClick={() => window.location.href="#lofty-price-section"}
+                >
+                  Comparar Planes
+                </button>
               </div>
-            </ScrollReveal>
+            </div>
           </div>
         </section>
       </main>
