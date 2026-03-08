@@ -14,13 +14,22 @@ import {
   Linkedin,
   Youtube,
 } from "lucide-react";
-import { useState } from "react";
-import ScrollReveal from "@/components/scroll-reveal";
+import { useState, useEffect } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Image from "next/image";
 
 export default function LandingPage() {
   const [prompt, setPrompt] = useState("");
   const [isGenerating, setIsGenerating] = useState(false);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+      easing: 'ease-out-cubic',
+      offset: 100
+    });
+  }, []);
 
   const handleGenerate = () => {
     if (!prompt.trim()) return;
@@ -63,89 +72,75 @@ export default function LandingPage() {
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-[#0891b2]/10 rounded-full blur-[120px] pointer-events-none" />
 
           <div className="container container-xl relative mx-auto px-4 text-center md:px-6">
-            <ScrollReveal direction="fade" delay={0}>
-              <div className="inline-flex items-center neu-pressed px-4 py-2 text-sm text-gray-600 mb-8 rounded-full">
-                <span className="flex h-2 w-2 rounded-full bg-[#0891b2] mr-3 shadow-[0_0_10px_#0891b2]"></span>
-                Lofty Apps 2.0 ya está disponible
+            <div data-aos="zoom-in" className="inline-flex items-center neu-pressed px-4 py-2 text-sm text-gray-600 mb-8 rounded-full">
+              <span className="flex h-2 w-2 rounded-full bg-[#0891b2] mr-3 shadow-[0_0_10px_#0891b2]"></span>
+              Lofty Apps 2.0 ya está disponible
+            </div>
+
+            <h1 data-aos="zoom-in" data-aos-delay="100" className="mx-auto max-w-4xl text-5xl font-bold tracking-tight md:text-7xl lg:text-8xl text-[#1a202c] pb-4 drop-shadow-lg">
+              Crea software <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2c3e50] to-gray-500">
+                sin escribir código.
+              </span>
+            </h1>
+
+            <p data-aos="zoom-in" data-aos-delay="200" className="mx-auto mt-6 max-w-2xl text-lg text-gray-600 md:text-xl leading-relaxed">
+              La plataforma completa para construir, lanzar y escalar tus
+              aplicaciones. Deja de configurar infraestructura y comienza a
+              innovar con Lofty.
+            </p>
+
+            <div data-aos="zoom-in" data-aos-delay="300" className="mx-auto mt-12 max-w-3xl textarea-xl">
+              <div className="neu-flat rounded-2xl p-2">
+                <textarea
+                  value={prompt}
+                  onChange={(e) => setPrompt(e.target.value)}
+                  placeholder="Describe tu producto digital... ej: Una app de recetas con filtros por ingredientes y sistema de favoritos"
+                  className="w-full neu-pressed px-6 py-4 rounded-xl text-gray-700 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#0891b2] transition-all text-base resize-none min-h-[120px]"
+                  disabled={isGenerating}
+                  rows={4}
+                />
+                <button
+                  onClick={handleGenerate}
+                  disabled={!prompt.trim() || isGenerating}
+                  className="neu-btn-primary px-8 py-4 rounded-xl font-bold text-base flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed w-full mt-2"
+                >
+                  {isGenerating ? (
+                    <>
+                      <div className="h-4 w-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                      Generando...
+                    </>
+                  ) : (
+                    <>
+                      <Zap className="h-5 w-5" />
+                      Crear Ahora
+                    </>
+                  )}
+                </button>
               </div>
-            </ScrollReveal>
-
-            <ScrollReveal direction="up" delay={100}>
-              <h1 className="mx-auto max-w-4xl text-5xl font-bold tracking-tight md:text-7xl lg:text-8xl text-[#1a202c] pb-4 drop-shadow-lg">
-                Crea software <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2c3e50] to-gray-500">
-                  sin escribir código.
-                </span>
-              </h1>
-            </ScrollReveal>
-
-            <ScrollReveal direction="up" delay={200}>
-              <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-600 md:text-xl leading-relaxed">
-                La plataforma completa para construir, lanzar y escalar tus
-                aplicaciones. Deja de configurar infraestructura y comienza a
-                innovar con Lofty.
+              <p className="mt-4 text-sm text-gray-500">
+                Prueba gratis, sin tarjeta de crédito. Crea tu primer producto
+                digital en segundos.
               </p>
-            </ScrollReveal>
-
-            <ScrollReveal direction="up" delay={300}>
-              <div className="mx-auto mt-12 max-w-3xl textarea-xl">
-                <div className="neu-flat rounded-2xl p-2">
-                  <textarea
-                    value={prompt}
-                    onChange={(e) => setPrompt(e.target.value)}
-                    placeholder="Describe tu producto digital... ej: Una app de recetas con filtros por ingredientes y sistema de favoritos"
-                    className="w-full neu-pressed px-6 py-4 rounded-xl text-gray-700 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#0891b2] transition-all text-base resize-none min-h-[120px]"
-                    disabled={isGenerating}
-                    rows={4}
-                  />
-                  <button
-                    onClick={handleGenerate}
-                    disabled={!prompt.trim() || isGenerating}
-                    className="neu-btn-primary px-8 py-4 rounded-xl font-bold text-base flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed w-full mt-2"
-                  >
-                    {isGenerating ? (
-                      <>
-                        <div className="h-4 w-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                        Generando...
-                      </>
-                    ) : (
-                      <>
-                        <Zap className="h-5 w-5" />
-                        Crear Ahora
-                      </>
-                    )}
-                  </button>
-                </div>
-                <p className="mt-4 text-sm text-gray-500">
-                  Prueba gratis, sin tarjeta de crédito. Crea tu primer producto
-                  digital en segundos.
-                </p>
-              </div>
-            </ScrollReveal>
+            </div>
 
             {/* Features Grid */}
             <section id="features" className="py-24 md:py-32 bg-[#e0e5ec]">
               <div className="container container-xl mx-auto px-4 md:px-6">
-                <ScrollReveal direction="up" delay={0}>
-                  <div className="mb-20 md:text-center max-w-3xl mx-auto">
-                    <h2 className="text-3xl font-bold tracking-tight text-[#1a202c] md:text-5xl mb-6">
-                      Todo lo que necesitas para construir.
-                    </h2>
-                    <p className="text-lg text-gray-600">
-                      Lofty Apps te ofrece los bloques de construcción para
-                      crear aplicaciones poderosas sin escribir una sola línea
-                      de código.
-                    </p>
-                  </div>
-                </ScrollReveal>
+                <div data-aos="zoom-in" className="mb-20 md:text-center max-w-3xl mx-auto">
+                  <h2 className="text-3xl font-bold tracking-tight text-[#1a202c] md:text-5xl mb-6">
+                    Todo lo que necesitas para construir.
+                  </h2>
+                  <p className="text-lg text-gray-600">
+                    Lofty Apps te ofrece los bloques de construcción para
+                    crear aplicaciones poderosas sin escribir una sola línea
+                    de código.
+                  </p>
+                </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                   {/* Feature 1 */}
-                  <ScrollReveal
-                    direction="up"
-                    delay={0}
-                    className="md:col-span-2"
-                  >
+                  <div data-aos="zoom-in" className="md:col-span-2">
                     <div className="neu-flat p-8 group transition-transform hover:-translate-y-1">
                       <div className="flex flex-col md:flex-row gap-8 items-start">
                         <div className="flex-1">
@@ -173,10 +168,10 @@ export default function LandingPage() {
                         </div>
                       </div>
                     </div>
-                  </ScrollReveal>
+                  </div>
 
                   {/* Feature 2 */}
-                  <ScrollReveal direction="up" delay={100}>
+                  <div data-aos="zoom-in" data-aos-delay="100">
                     <div className="neu-flat p-8 group transition-transform hover:-translate-y-1">
                       <div className="neu-icon-box h-14 w-14 text-purple-500 mb-6 rounded-2xl">
                         <Play className="h-7 w-7" />
@@ -197,10 +192,10 @@ export default function LandingPage() {
                         </div>
                       </div>
                     </div>
-                  </ScrollReveal>
+                  </div>
 
                   {/* Feature 3 */}
-                  <ScrollReveal direction="up" delay={200}>
+                  <div data-aos="zoom-in" data-aos-delay="200">
                     <div className="neu-flat p-8 group transition-transform hover:-translate-y-1">
                       <div className="neu-icon-box h-14 w-14 text-pink-500 mb-6 rounded-2xl">
                         <Code2 className="h-7 w-7" />
@@ -226,14 +221,10 @@ export default function LandingPage() {
                           </div>
                         </div>
                     </div>
-                  </ScrollReveal>
+                  </div>
 
                   {/* Feature 4 */}
-                  <ScrollReveal
-                    direction="up"
-                    delay={300}
-                    className="md:col-span-2"
-                  >
+                  <div data-aos="zoom-in" data-aos-delay="300" className="md:col-span-2">
                     <div className="neu-flat p-8 group transition-transform hover:-translate-y-1">
                       <div className="flex flex-col md:flex-row-reverse gap-8 items-start">
                         <div className="flex-1">
@@ -264,7 +255,7 @@ export default function LandingPage() {
                         </div>
                       </div>
                     </div>
-                  </ScrollReveal>
+                  </div>
                 </div>
               </div>
             </section>
@@ -272,36 +263,34 @@ export default function LandingPage() {
             {/* CTA Section */}
             <section className="relative py-24 md:py-32 overflow-hidden">
               <div className="container container-xl relative mx-auto px-4 text-center md:px-6">
-                <ScrollReveal direction="up" delay={0}>
-                  <div className="neu-flat p-12 md:p-20 max-w-5xl mx-auto relative overflow-hidden cta-xl">
-                    <div className="absolute top-0 right-0 w-64 h-64 bg-[#0891b2]/10 blur-[80px] rounded-full pointer-events-none" />
-                    <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/10 blur-[80px] rounded-full pointer-events-none" />
+                <div data-aos="zoom-in" className="neu-flat p-12 md:p-20 max-w-5xl mx-auto relative overflow-hidden cta-xl">
+                  <div className="absolute top-0 right-0 w-64 h-64 bg-[#0891b2]/10 blur-[80px] rounded-full pointer-events-none" />
+                  <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/10 blur-[80px] rounded-full pointer-events-none" />
 
-                    <h2 className="mx-auto max-w-3xl text-4xl font-bold tracking-tight text-[#1a202c] md:text-5xl mb-6 relative z-10">
-                      ¿Listo para construir tu próxima gran idea?
-                    </h2>
-                    <p className="mx-auto max-w-xl text-lg text-gray-600 mb-10 relative z-10">
-                      Únete a miles de creadores que están construyendo el
-                      futuro con Lofty Apps. No requiere tarjeta de crédito.
-                    </p>
-                    <div className="flex flex-col items-center justify-center gap-6 sm:flex-row relative z-10">
-                         <button
-                        className="neu-btn-primary h-14 px-10 text-lg font-bold w-full sm:w-auto"
-                        onClick={() => {
-                          window.location.href = "https://platform.loftyapps.com/";
-                        }}
-                      >
-                        Comienza a Construir Ahora
-                      </button>
-                      <button className="neu-btn h-14 px-10 text-lg font-medium w-full sm:w-auto"
+                  <h2 className="mx-auto max-w-3xl text-4xl font-bold tracking-tight text-[#1a202c] md:text-5xl mb-6 relative z-10">
+                    ¿Listo para construir tu próxima gran idea?
+                  </h2>
+                  <p className="mx-auto max-w-xl text-lg text-gray-600 mb-10 relative z-10">
+                    Únete a miles de creadores que están construyendo el
+                    futuro con Lofty Apps. No requiere tarjeta de crédito.
+                  </p>
+                  <div className="flex flex-col items-center justify-center gap-6 sm:flex-row relative z-10">
+                       <button
+                      className="neu-btn-primary h-14 px-10 text-lg font-bold w-full sm:w-auto"
                       onClick={() => {
-                          window.location.href = "https://calendly.com/argesware/30min";
-                        }}>
-                        Contacta Ventas
-                      </button>
-                    </div>
+                        window.location.href = "https://platform.loftyapps.com/";
+                      }}
+                    >
+                      Comienza a Construir Ahora
+                    </button>
+                    <button className="neu-btn h-14 px-10 text-lg font-medium w-full sm:w-auto"
+                    onClick={() => {
+                        window.location.href = "https://calendly.com/argesware/30min";
+                      }}>
+                      Contacta Ventas
+                    </button>
                   </div>
-                </ScrollReveal>
+                </div>
               </div>
             </section>
           </div>
@@ -310,24 +299,20 @@ export default function LandingPage() {
         {/* Social Proof */}
         <section className="py-12 bg-[#e0e5ec]">
           <div className="container container-xl mx-auto px-4 md:px-6">
-            <ScrollReveal direction="fade" delay={0}>
-              <p className="text-center text-sm font-bold tracking-widest text-gray-500 mb-10">
-                CONFIADO POR EQUIPOS INNOVADORES
-              </p>
-            </ScrollReveal>
-            <ScrollReveal direction="up" delay={100}>
-              <div className="flex flex-wrap items-center justify-center gap-12 md:gap-20 opacity-30 grayscale">
-                <div className="text-2xl font-black text-[#2c3e50]">
-                  <Image src={"/images/fedecamara.png"} width={300} height={300} alt="Fedecamara Logo" />
-                </div>
-                <div className="text-2xl font-black text-[#2c3e50]">
-                  <Image src={"/images/europea.png"} width={300} height={300} alt="Europea Logo" />
-                </div>
-                <div className="text-2xl font-black text-[#2c3e50]">
-                  <Image src={"/images/bid.png"} width={300} height={300} alt="Bid Logo" />
-                </div>
+            <p data-aos="zoom-in" className="text-center text-sm font-bold tracking-widest text-gray-500 mb-10">
+              CONFIADO POR EQUIPOS INNOVADORES
+            </p>
+            <div data-aos="zoom-in" data-aos-delay="100" className="flex flex-wrap items-center justify-center gap-12 md:gap-20 opacity-30 grayscale">
+              <div className="text-2xl font-black text-[#2c3e50]">
+                <Image src={"/images/fedecamara.png"} width={300} height={300} alt="Fedecamara Logo" />
               </div>
-            </ScrollReveal>
+              <div className="text-2xl font-black text-[#2c3e50]">
+                <Image src={"/images/europea.png"} width={300} height={300} alt="Europea Logo" />
+              </div>
+              <div className="text-2xl font-black text-[#2c3e50]">
+                <Image src={"/images/bid.png"} width={300} height={300} alt="Bid Logo" />
+              </div>
+            </div>
           </div>
         </section>
       </main>
