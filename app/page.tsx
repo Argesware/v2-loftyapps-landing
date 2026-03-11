@@ -14,6 +14,7 @@ import {
   Linkedin,
   Youtube,
 } from "lucide-react";
+import { createProcessGeminiPublic } from 'api-lofty';
 import { useState, useEffect } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -31,13 +32,17 @@ export default function LandingPage() {
     });
   }, []);
 
-  const handleGenerate = () => {
+  const handleGenerate = async () => {
     if (!prompt.trim()) return;
     setIsGenerating(true);
-    setTimeout(() => {
-      setIsGenerating(false);
-      console.log("[v0] Generando producto digital con prompt:", prompt);
-    }, 2000);
+    const resGemini = await createProcessGeminiPublic({text: prompt});
+    if (resGemini.data) {
+      window.location.href = `http://localhost:3000/login?promptId=${encodeURIComponent(resGemini.data._id)}`
+    }
+    // setTimeout(() => {
+    //   // setIsGenerating(false);
+    //   // console.log("[v0] Generando producto digital con prompt:", prompt);
+    // }, 2000);
   };
 
   return (
